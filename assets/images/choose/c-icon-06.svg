@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="83.97" height="75.5" viewBox="0 0 83.97 75.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.267" x2="0.759" y2="0.953" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#771efc"/>
+      <stop offset="1" stop-color="#b586ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2959" data-name="Group 2959" transform="translate(-1232 -3065)">
+    <g id="Group_2122" data-name="Group 2122" transform="translate(-206 1785)">
+      <path id="Polygon_1" data-name="Polygon 1" d="M56.25,0,75,32.5,56.25,65H18.75L0,32.5,18.75,0Z" transform="translate(1503 1280) rotate(90)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="web" d="M55.523,4H7.947A5.939,5.939,0,0,0,2.03,9.947L2,45.629a5.965,5.965,0,0,0,5.947,5.947H55.523a5.965,5.965,0,0,0,5.947-5.947V9.947A5.965,5.965,0,0,0,55.523,4ZM7.947,18.868H39.169V29.275H7.947Zm0,16.354H39.169V45.629H10.921a2.982,2.982,0,0,1-2.974-2.974Zm44.6,10.407H45.116V18.868H55.523V42.656A2.982,2.982,0,0,1,52.55,45.629Z" transform="translate(1254 3088.424)" fill="#e2d0fc" stroke="rgba(255,255,255,0.27)" stroke-width="1"/>
+  </g>
+</svg>

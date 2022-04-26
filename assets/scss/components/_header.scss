@@ -1,0 +1,943 @@
+/*----------------------------------------*/
+/*  02. Header CSS
+/*----------------------------------------*/
+
+// ========================
+// Header Top Bar Start
+// =========================
+
+.header-top-section {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: rgba(120, 125, 167, 0.8);
+		display: block;
+		height: 100%;
+		width: 40%;
+		border-radius: 27px 0px 0px 33px;
+
+		@include respond(xl) {
+			width: 42%;
+		}
+		@include respond(medium) {
+			width: 50%;
+		}
+		@include respond(tabland) {
+			width: 65%;
+		}
+		@include respond(tabport) {
+			width: 85%;
+		}
+		@include respond(phone) {
+			width: 100%;
+			border-radius: 0;
+		}
+	}
+}
+
+.header-top-bar {
+	display: flex;
+	align-items: center;
+	padding: 16.5px 0px 16.5px 43px;
+	position: relative;
+	margin-left: auto;
+	width: 100%;
+	height: 49px;
+	justify-content: flex-end;
+
+	@include respond(phone-sm) {
+		display: none;
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-right: 33px;
+			a {
+				font-family: $fontEuclid;
+				font-size: 12px;
+				color: $clrdefault;
+				font-weight: $fontRegular;
+				transition: $transition;
+
+				&:hover {
+					color: $clrPrimary;
+				}
+			}
+			img,
+			svg {
+				width: auto;
+				height: auto;
+				display: block;
+				margin-right: 12px;
+			}
+		}
+	}
+	.cart {
+		display: flex;
+		align-items: center;
+		position: relative;
+		img,
+		svg {
+			width: auto;
+			height: auto;
+			display: block;
+			margin-right: 5px;
+		}
+		a {
+			font-family: $fontEuclid;
+			font-size: 12px;
+			font-weight: $fontRegular;
+			line-height: 16px;
+			color: $clrdefault;
+			transition: $transition;
+
+			&:hover {
+				color: $clrPrimary;
+			}
+		}
+		span {
+			color: $clrdefault;
+			width: 15px;
+			height: 19px;
+			background: $clrContent;
+			border-radius: 5px;
+			@include flex-box;
+			margin-left: 6px;
+		}
+	}
+	.currency {
+		margin-left: 15px;
+
+		.dropdown-item {
+			&:hover {
+				background: transparent;
+			}
+		}
+		.currency-btn {
+			font-family: $fontEuclid;
+			font-size: 12px;
+			font-weight: $fontRegular;
+			line-height: 16px;
+			color: $clrdefault;
+			border: none;
+			text-transform: uppercase;
+			outline: none;
+			background: transparent;
+			position: relative;
+			transition: $transition;
+
+			&:hover {
+				background: transparent;
+				color: $clrPrimary;
+			}
+			&::after {
+				content: '\f078';
+				position: absolute;
+				top: 50%;
+				right: -15px;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				transform: translateY(-50%);
+				font-size: 10px;
+			}
+		}
+		.dropdown-menu {
+			position: absolute;
+			right: 0;
+			padding: 10px;
+			top: 50px;
+			min-width: 75px;
+			border: none;
+			outline: none;
+			display: block;
+			background: $clrdefault;
+			box-shadow: 0px 5px 10px rgba(231, 231, 231, 0.8);
+			border-top: 3px solid $clrPrimary;
+			opacity: 0;
+			visibility: hidden;
+			transition: $transition;
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			li {
+				margin-right: 0;
+				a {
+					color: $clrheading;
+					font-family: $fontEuclid;
+					font-size: 12px;
+					padding: 5px;
+					font-weight: $fontRegular;
+					text-align: center;
+
+					&:hover {
+						background: transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+// DropDown-cart
+
+.dropdown-cart {
+	width: 350px;
+	padding: 30px 10px 30px 20px;
+	border-radius: 5px;
+	box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
+	border: 0;
+	position: absolute;
+	top: 50px;
+	z-index: 9999;
+	right: 0;
+	background: #fff;
+	border-top: 3px solid $clrPrimary;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition;
+
+	@include respond(phone-sm) {
+		top: 110%;
+		left: 50%;
+		right: auto;
+		transform: translateX(-50%);
+	}
+
+	&.active {
+		top: 40px;
+		opacity: 1;
+		visibility: visible;
+		@include respond(phone-sm) {
+			top: 100%;
+		}
+	}
+
+	@include respond(phone-sm) {
+		width: 300px;
+	}
+
+	.cart-items {
+		// height: 280px;
+		min-height: auto;
+		max-height: 280px;
+		height: 100%;
+		overflow-y: auto;
+		padding-right: 15px;
+
+		.single-cart-item {
+			display: flex;
+			position: relative;
+			margin-bottom: 15px;
+			border-bottom: 1px dashed #cdcdcd;
+			padding-bottom: 15px;
+
+			.item-image {
+				display: flex;
+				align-items: center;
+
+				img {
+					width: 50px;
+				}
+			}
+			.item-content {
+				flex: 1;
+				padding-right: 25px;
+				padding-left: 20px;
+
+				.title a {
+					font-size: 16px;
+					font-weight: 700;
+					color: $clrheading;
+					line-height: 1.3;
+				}
+				.total-quantity {
+					font-family: $fontEuclid;
+					font-size: 14px;
+					color: $clrPrimary;
+					line-height: 1.75;
+					display: block;
+				}
+			}
+			.btn-close {
+				position: absolute;
+				top: 0;
+				right: 5px;
+				border: none;
+				outline: none;
+				height: 25px;
+				width: 25px;
+				background: $clrdefault;
+				border-radius: 50%;
+				box-shadow: 0px 0px 10px rgba(38, 38, 38, 0.12);
+				@include flex-box;
+				justify-content: center;
+				transition: $transition;
+
+				i {
+					font-size: 14px;
+				}
+				&:hover {
+					background: $clrPrimary;
+					color: $clrdefault;
+				}
+			}
+		}
+	}
+	.cart-total {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 25px;
+		padding-right: 10px;
+
+		.label {
+			font-family: $fontEuclid;
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.75;
+			display: block;
+			color: $clrheading;
+		}
+		.value {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1.75;
+			display: block;
+			color: $clrPrimary;
+		}
+	}
+	.cart-btns {
+		margin-top: 15px;
+		padding-right: 10px;
+
+		.btn {
+			font-family: $fontEuclid;
+			background: $clrheading;
+			font-size: 14px;
+			color: $clrdefault;
+			padding: 8px;
+			display: block;
+			width: 100%;
+			margin-top: 10px;
+			transition: $transition;
+
+			&:hover {
+				background: $clrPrimary;
+				color: $clrdefault;
+			}
+		}
+	}
+}
+
+.header-section {
+	position: relative;
+	z-index: 99;
+}
+
+// ==============================
+// Main Header Start
+// ==============================
+
+.header-section {
+	.nav {
+		@include respond(tabland) {
+			padding: 20px 0px;
+		}
+	}
+	.header-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.header-logo a {
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
+	.header-menu {
+		.main-menu {
+			display: flex;
+
+			li {
+				position: relative;
+				&.has-dropdown {
+					a {
+						&::after {
+							content: '\f078';
+							font-family: 'Font Awesome 5 Free';
+							font-weight: 900;
+							font-size: 13px;
+							color: $clrContent;
+							margin-left: 10px;
+							transition: all 0.3s linear;
+						}
+					}
+				}
+				a {
+					font-family: $fontEuclid;
+					font-size: 16px;
+					font-weight: $fontRegular;
+					color: $clrContent;
+					display: inline-block;
+					margin-right: 38px;
+					line-height: 80px;
+					padding: 0;
+					text-transform: capitalize;
+					transition: $transition;
+					position: relative;
+
+					&:hover,
+					&.active {
+						color: $clrPrimary !important;
+
+						&::after {
+							color: $clrPrimary;
+						}
+					}
+					@include respond(xl) {
+						margin-right: 20px;
+						font-size: 15px;
+					}
+					@include respond(medium-xl) {
+						margin-right: 17px;
+						font-size: 15px;
+					}
+				}
+				&:last-child a {
+					margin-right: 0 !important;
+				}
+				.sub-menu {
+					position: absolute;
+					left: 0;
+					top: 110%;
+					width: 240px;
+					background: #ffffff;
+					box-shadow: 0 2px 29px rgba(0, 0, 0, 0.05);
+					border-radius: 5px;
+					border-top: 3px solid $clrPrimary;
+					opacity: 0;
+					z-index: 99;
+					visibility: hidden;
+					transition: all 0.3s linear;
+
+					li {
+						a {
+							padding: 10px 25px;
+							line-height: 25px;
+							font-family: $fontEuclid;
+							font-size: 16px;
+							font-weight: $fontRegular;
+							color: $clrContent;
+							border-bottom: 1px dashed #d9d9d9;
+							width: 100%;
+							display: block;
+							position: relative;
+							z-index: 1;
+
+							&::before {
+								content: '';
+								position: absolute;
+								left: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								background: $clrPrimary;
+								width: 10px;
+								height: 2px;
+								opacity: 0;
+								visibility: hidden;
+								transition: all 0.3s linear;
+							}
+
+							&::after {
+								display: none;
+							}
+							&:hover,
+							&.active {
+								padding-left: 35px;
+
+								&::before {
+									opacity: 1;
+									visibility: visible;
+									left: 15px;
+								}
+							}
+						}
+						&:last-child a {
+							border: none;
+						}
+					}
+				}
+				&:last-of-type .sub-menu {
+					right: 0;
+					left: auto;
+				}
+				&:hover {
+					.sub-menu {
+						opacity: 1;
+						visibility: visible;
+						top: 100%;
+					}
+					.mega-menu {
+						opacity: 1;
+						visibility: visible;
+						top: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Header Meta Start
+.header-meta {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.header-btn {
+	display: flex;
+	align-items: center;
+	a {
+		font-family: $fontCircular;
+		font-size: 16px;
+		font-weight: $fontLight;
+		color: $clrheading;
+		display: inline-block;
+		border-radius: 5px;
+		width: 107px;
+		height: 36px;
+		@include flex-box;
+		background: $clryellow;
+	}
+	.solid-btn {
+		background: transparent;
+		color: $clrPrimary;
+
+		@include respond(medium) {
+			display: none;
+		}
+	}
+	@include respond(phone-xm) {
+		display: none;
+	}
+}
+
+// Header Toggle Start
+
+.header-toggle {
+	margin-left: 15px;
+
+	button {
+		border: 0;
+		padding: 0;
+		outline: none;
+		height: 40px;
+		width: 40px;
+		border-radius: 4px;
+		background: $clrdefault;
+		box-shadow: 0px 0px 10px #d5d5d5;
+		pointer-events: auto;
+		display: block;
+
+		span {
+			width: 25px;
+			height: 2px;
+			background: $clrheading;
+			margin: 0 auto 6px;
+			display: block;
+			position: relative;
+			pointer-events: none;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: -8px;
+				right: 0;
+				width: 20px;
+				height: 2px;
+				background: $clrheading;
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				top: 8px;
+				right: 0;
+				width: 20px;
+				height: 2px;
+				background: $clrheading;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/*--
+/*  2.3 - Header Top CSS
+/*----------------------------------------*/
+
+.bg-shade {
+	content: '';
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: #000;
+}
+
+body.body-overlay .bg-shade {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	visibility: visible;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	transition: $transition;
+	background: #000;
+	transition: $transition;
+	opacity: 0.9;
+}
+
+#offcanvasExample {
+	position: relative;
+	z-index: 9999;
+}
+.offcanvas-body {
+	position: fixed;
+	top: 0;
+	padding: 30px;
+	width: 320px;
+	background: $clrheading;
+	height: 100vh;
+	z-index: 99;
+	left: -400px;
+	transition: $transition;
+	overflow-y: scroll;
+
+	&.active {
+		left: 0;
+	}
+
+	.offcanvas-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.offcanvas-logo a img {
+			width: auto;
+		}
+
+		.close-btn {
+			background: none;
+			border: 0;
+			font-size: 18px;
+			color: #ffffff;
+			transition: all 0.3s linear;
+			height: 35px;
+			width: 35px;
+			background: rgba(255, 255, 255, 0.1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 3px;
+			position: relative;
+			border: none;
+			outline: none;
+
+			&::before {
+				content: '\f00d';
+				position: absolute;
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				transition: $transition;
+			}
+
+			&:hover {
+				&::before {
+					transform: rotate(90deg);
+					color: $clrPrimary;
+				}
+			}
+		}
+	}
+	@include respond(phone-sm) {
+		width: 300px;
+	}
+}
+
+.offcanvas-menu {
+	padding: 30px 0;
+	.main-menu {
+		li {
+			position: relative;
+			border-bottom: 1px dashed #444444;
+
+			h6 {
+				text-transform: uppercase;
+				color: $clrdefault;
+				background: #242d46;
+				padding-left: 6%;
+			}
+
+			a {
+				display: block;
+				font-size: 16px;
+				font-weight: 600;
+				font-family: 'Manrope', sans-serif;
+				color: #ffffff;
+				padding: 14px 0px;
+				position: relative;
+
+				&:hover {
+					color: $clrPrimary;
+				}
+			}
+			.sub-menu {
+				li {
+					border: none;
+
+					a {
+						padding-left: 6%;
+					}
+				}
+			}
+			.menu-expand {
+				position: absolute;
+				right: 0px;
+				top: 10px;
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 3px;
+
+				&::before {
+					position: absolute;
+					content: '';
+					width: 16px;
+					height: 2px;
+					background-color: #ffffff;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					transition: all 0.3s linear;
+				}
+				&::after {
+					position: absolute;
+					content: '';
+					width: 2px;
+					height: 16px;
+					left: 50%;
+					top: 50%;
+					bottom: 0;
+					background-color: #ffffff;
+					transform: translate(-50%, -50%);
+					transition: all 0.3s linear;
+				}
+			}
+			&.active {
+				.menu-expand::after {
+					height: 0;
+				}
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
+}
+
+// =============================
+// Sticky
+// =============================
+
+.nav-scroll {
+	background-color: #ffffff;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+	position: fixed !important;
+	top: -80px;
+	right: 0;
+	left: 0;
+	transform: translateY(80px);
+	transition: transform 0.5s;
+	z-index: 999;
+
+	@include respond(tabland) {
+		// padding: 24px 15px !important;
+	}
+}
+
+// OverLay Slide
+.overlay-slide {
+	position: fixed;
+	background-color: $clrdefault;
+	top: 0;
+	left: -350px;
+	width: 320px;
+	z-index: 9999;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition;
+	overflow: hidden;
+	box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.2);
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+		left: 0;
+		z-index: 9999;
+	}
+	nav {
+		position: relative;
+		height: 100%;
+		padding: 25px;
+		text-align: left;
+
+		.main-nav {
+			list-style: none;
+			padding: 30px 0px 0px;
+			display: inline-block;
+			position: relative;
+			height: 100%;
+			width: 100%;
+			line-height: 1;
+
+			li {
+				display: block;
+				position: relative;
+
+				&.sub-menu {
+					a {
+						&::after {
+							content: '\f078';
+							font-family: 'Font Awesome 5 Free';
+							font-weight: 900;
+							font-size: 13px;
+							color: $clrContent;
+							margin-left: 10px;
+							transition: all 0.3s linear;
+							position: absolute;
+							right: 20px;
+							top: 50%;
+							transform: translateY(-50%);
+						}
+					}
+				}
+
+				a {
+					font-family: $fontEuclid;
+					font-size: 16px;
+					font-weight: $fontRegular;
+					color: $clrContent;
+					display: block;
+					padding: 15px 0px;
+					text-transform: capitalize;
+					transition: $transition;
+					position: relative;
+					border-top: 1px dashed #e7e7e7;
+
+					&.active,
+					&:hover {
+						color: $clrContent;
+					}
+				}
+
+				.fa {
+					width: 16px;
+					text-align: center;
+					margin-right: 20px;
+					float: right;
+				}
+			}
+			.sub-item {
+				margin-left: 30px;
+
+				a {
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.logo {
+		position: relative;
+		img {
+			width: auto;
+			height: auto;
+			display: block;
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+			height: 35px;
+			width: 35px;
+			border: 1px solid #e5e5e5;
+			border-radius: 6px;
+			@include flex-box;
+			cursor: pointer;
+			transition: 0.3s linear;
+
+			a {
+				font-size: 16px;
+				color: $clrheading;
+			}
+		}
+	}
+}
+
+// Bg Shade
+
+.bg-shade {
+	content: '';
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	background: #000;
+}
+
+body.body-overlay .bg-shade {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	visibility: visible;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	-webkit-transition: 0.3s linear;
+	transition: 0.3s linear;
+	background: #000;
+	transition: 0.3s linear;
+	opacity: 0.9;
+}

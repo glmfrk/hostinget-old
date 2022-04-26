@@ -1,0 +1,237 @@
+@import 'mediaQuery';
+
+@mixin section-title {
+	.section-title {
+		margin-bottom: 51px;
+		h2 {
+			display: block;
+			margin-bottom: 18px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 28px;
+			font-weight: $fontRegular;
+			color: $clrContent;
+			margin-bottom: 0;
+			max-width: 550px;
+			margin: auto;
+		}
+		&-v2 {
+			h2 {
+				max-width: 500px;
+			}
+			p {
+				max-width: 690px;
+				margin: 0;
+			}
+		}
+		&-v3 {
+			margin-bottom: 45px;
+			h2 {
+				font-size: 38px;
+				max-width: 100%;
+				color: $clrdefault;
+			}
+			p {
+				font-size: 16px;
+				line-height: 28px;
+				max-width: 100%;
+				color: $clrdefault;
+			}
+		}
+		@include respond(phone) {
+			margin-bottom: 40px !important;
+		}
+	}
+}
+
+@mixin banner-size {
+	position: relative;
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: 1;
+}
+
+@mixin banner-bg {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+}
+
+@mixin transform {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin flex-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin video-box {
+	.round {
+		position: relative;
+		overflow: hidden;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			// border-radius: 3px;
+			// background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1;
+		}
+		.video-box {
+			margin: 0;
+			.video-btn {
+				i {
+					position: relative;
+					z-index: 1;
+					top: 0px;
+					left: 0px;
+					font-size: 20px;
+					color: $clrContent;
+				}
+				@include transform;
+				background-color: $clrdefault;
+				border-radius: 50%;
+				color: $clrContent;
+				display: block;
+				text-align: center;
+				line-height: 85px;
+				margin: 0 auto;
+				height: 80px;
+				width: 80px;
+				z-index: 1;
+
+				@include respond(phone-sm) {
+					height: 60px;
+					width: 60px;
+					line-height: 67px;
+				}
+
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					animation: beat 1.5s linear infinite;
+					height: 100%;
+					width: 100%;
+					border: 8px solid $clrdefault;
+					border-radius: 50%;
+					z-index: -1;
+				}
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					animation: beat 2.1s linear infinite;
+					border: 8px solid rgb(206, 206, 206);
+					border-radius: 50%;
+					height: 100%;
+					width: 100%;
+				}
+			}
+			span {
+				display: none !important;
+			}
+		}
+
+		@keyframes beat {
+			0% {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+			100% {
+				opacity: 0;
+				-webkit-transform: scale(2);
+				transform: scale(2);
+			}
+		}
+	}
+}
+
+@mixin carousel-nav {
+	.owl-carousel {
+		.owl-dots {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			button {
+				height: 10px;
+				width: 15px;
+				background: $clrContent;
+				border-radius: 50px;
+				display: block;
+				border: none;
+				outline: none;
+				margin: 30px 4px 0px;
+				transition: $transition;
+				position: relative;
+				transition: $transition;
+
+				&.active {
+					width: 30px;
+					&::before {
+						background: $clrPrimary;
+						opacity: 1;
+					}
+				}
+				@media (max-width: 375px) {
+					margin: 30px 5px 30px 5px;
+				}
+			}
+		}
+		.owl-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			right: 0;
+			display: block;
+			font-size: 16px;
+			transition: $transition;
+			text-align: right;
+
+			button {
+				display: block;
+				border: none;
+				outline: none;
+				transition: $transition;
+				position: absolute;
+				right: -38px;
+				color: $clrContent;
+				&.owl-prev {
+					top: -15px;
+				}
+				&.owl-next {
+					top: 15px;
+				}
+			}
+		}
+	}
+}

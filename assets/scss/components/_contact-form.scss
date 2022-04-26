@@ -1,0 +1,291 @@
+/* contact section styles here start  */
+
+.contact-section {
+    padding-top: 73px;
+    background: url(../images/contact/contact-bgimage.png) no-repeat center center;
+    background-size: cover;
+}
+
+.conatact-form-wrapper {
+    max-width: 840px;
+}
+.contact-info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-info {
+    flex-basis: 100%;
+    max-width: 780px;
+
+    .heading {
+        color: #1e266d;
+        font-size: 45px;
+        line-height: 60px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+    .sub-heading {
+        display: block;
+        margin-top: 17.6px;
+        margin-bottom: 29px;
+        color: #1e266d;
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+}
+
+.list-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    @include respond(tabland) {
+        display: block;
+    }
+}
+
+.info-list {
+    br {
+        @include respond(tabland) {
+            display: none;
+        }
+    }
+}
+ul.info-list.v2 {
+    flex-basis: 28%;
+    align-self: flex-start;
+}
+.info-list a {
+    color: #787da7;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    display: block;
+}
+.info-list .location {
+    color: #771efc;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 60px;
+    position: absolute;
+    bottom: 0px;
+    right: 100px;
+    text-decoration: underline !important;
+
+    @include respond(phone) {
+        position: relative;
+        right: auto;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+}
+
+ul.info-list li a {
+    display: flex;
+    align-items: flex-start;
+    transition: $transition;
+
+    &:hover {
+        color: $clrPrimary;
+    }
+}
+
+.info-list img {
+    color: #771efc;
+    width: auto;
+    margin-right: 8px;
+}
+ul.info-list.v2 a {
+    display: flex;
+    align-items: center;
+    text-align: right;
+    transition: $transition;
+
+    &:hover {
+        color: $clrPrimary;
+    }
+}
+ul.info-list li {
+    margin-bottom: 38px;
+    position: relative;
+}
+ul.info-list.v2 li {
+    margin-bottom: 23px;
+}
+.social-links {
+    flex-basis: 100%;
+    max-width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 38px;
+    flex-direction: column;
+
+    @include respond(medium) {
+        margin-right: 25px;
+    }
+}
+.social-links li {
+    margin-bottom: 15px;
+}
+.social-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    color: rgba(132, 132, 132, 1);
+    background: rgba(139, 139, 139, 0.11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: $transition;
+
+    &:hover {
+        color: $clrdefault;
+        background: $clrPrimary;
+    }
+}
+
+form#form {
+    width: 100%;
+    max-width: 740px;
+}
+.input-box-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-box {
+    flex-basis: 48%;
+    // max-width: 351px;
+    margin-bottom: 17px;
+
+    @include respond(phone-sm) {
+        flex-basis: 100%;
+    }
+}
+.input-box.v2 {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 45px;
+}
+
+.input-box label,
+.input-box input {
+    display: block;
+    width: 100%;
+}
+.input-box input,
+.input-box textarea {
+    border: none;
+    outline: none;
+    padding: 24.2px 20px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #787da7;
+    color: #787da7;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: -20px 0px 20px 0 rgba(0, 0, 0, 0.08);
+}
+.input-box input[type="email"] {
+    text-transform: lowercase;
+}
+.input-box input:hover,
+.input-box textarea:hover {
+    box-shadow: -20px 0px 20px 0 rgba(0, 0, 0, 0.08);
+}
+.input-box input:focus,
+.input-box textarea:focus {
+    box-shadow: none;
+    border: none;
+    outline: 0.8px solid rgba(0, 0, 0, 0.08);
+}
+
+.input-box label {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #787da7;
+    margin-bottom: 9px;
+    padding-left: 15px;
+    text-transform: capitalize;
+}
+.input-box input {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 19px;
+    color: #787da7;
+}
+textarea#massage {
+    width: 100%;
+    resize: none;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: #787da7;
+    min-height: 192px;
+}
+textarea#massage::placeholder {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 300;
+    color: rgba(120, 125, 167, 0.55);
+}
+#form button {
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #383838;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+    max-width: 236px;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    background: #f8ca09;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+#form button i {
+    font-size: 13px;
+    margin-left: 22px;
+}
+
+/* contact section styles here done */
+
+@media (max-width: 767px) {
+    .contact-info-box {
+        flex-wrap: wrap;
+    }
+    .contact-info-box .social-links {
+        flex-direction: row;
+        margin: 10px 0px 20px;
+    }
+    .contact-info-box .social-links li {
+        margin-right: 15px;
+    }
+    .list-box {
+        flex-wrap: wrap;
+    }
+    .info-list a span {
+        margin-left: 0;
+    }
+    .input-box {
+        max-width: 100%;
+    }
+    ul.info-list.v2 a {
+        text-align: left;
+    }
+}

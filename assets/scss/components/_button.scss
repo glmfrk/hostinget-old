@@ -1,0 +1,23 @@
+.btn {
+	font-family: $fontEuclid;
+	font-size: 16px;
+	font-weight: $fontRegular;
+	line-height: 21px;
+	color: $clrdefault;
+	background: $clryellow;
+	padding: 21px 66px;
+	display: inline-block;
+	border-radius: 30px;
+	text-transform: capitalize;
+	transition: 0.3s linear;
+	&:focus {
+		box-shadow: none;
+	}
+	&:hover {
+		background: $clrheading;
+		color: $clrdefault;
+	}
+	@include respond(phone) {
+		padding: 15px 27px;
+	}
+}

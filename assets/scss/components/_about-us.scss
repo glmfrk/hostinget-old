@@ -1,0 +1,220 @@
+// 	<!-- About Page Blog Section Start  -->
+.aboutBanner-sec {
+	padding-top: 156px;
+	padding-bottom: 41%;
+	.aboutBlog-content {
+		p {
+			padding-right: 20%;
+		}
+	}
+	@include respond(medium) {
+		padding-top: 100px;
+	}
+	@include respond(tabland) {
+		padding-bottom: 75px;
+	}
+	@include respond(tabport) {
+		padding-bottom: 20px;
+		.aboutBlog-content {
+			p {
+				padding-right: 0px;
+			}
+		}
+	}
+}
+.aboutBlog-content {
+	.sub-title {
+		font-size: 24px;
+		line-height: 32px;
+		color: $clrheading;
+		font-weight: 400;
+		margin-bottom: 14px;
+	}
+	h2 {
+		font-size: 50px;
+		line-height: 67px;
+		font-weight: 400;
+		margin-bottom: 31px;
+		span {
+			display: inline-block;
+			color: $clrheading;
+			font-weight: 700;
+		}
+	}
+	@include respond(medium) {
+		h2 {
+			font-size: 40px;
+			line-height: 53px;
+		}
+	}
+	@include respond(tabland) {
+		margin-bottom: 30px;
+		h2 {
+			font-size: 34px;
+			line-height: 48px;
+		}
+	}
+	@include respond(tabport) {
+		h2 {
+			font-size: 29px;
+			line-height: 42px;
+		}
+	}
+}
+
+.aboutItem-bannerImage {
+	position: absolute;
+	top: 30px;
+	right: auto;
+}
+.technology-infrastructure {
+	position: relative;
+	margin-top: -26%;
+	z-index: 5;
+	.aboutBlog-image {
+		img {
+			width: auto;
+			margin: auto;
+		}
+	}
+	@include respond(tabland) {
+		margin-top: 0;
+		padding-top: 0px;
+		.aboutBlog-image {
+			img {
+				width: 100%;
+				margin: auto;
+			}
+		}
+	}
+}
+
+// 	<!-- About Page Blog Section End  -->
+
+// Counter User Section Start
+.conter-number-section {
+	padding: 0px;
+	.section-title {
+		margin-bottom: 70px;
+		h2 {
+			font-size: 50px;
+			font-weight: 700;
+			line-height: 67px;
+			color: $clrheading;
+		}
+		h3 {
+			font-size: 50px;
+			font-weight: 400;
+			line-height: 67px;
+			color: $clrheading;
+		}
+		@include respond(medium) {
+			h2,
+			h3 {
+				font-size: 40px;
+				line-height: 53px;
+			}
+		}
+		@include respond(tabland) {
+			margin-bottom: 30px;
+			h2,
+			h3 {
+				font-size: 34px;
+				line-height: 48px;
+			}
+		}
+		@include respond(tabport) {
+			h2,
+			h3 {
+				font-size: 29px;
+				line-height: 42px;
+			}
+		}
+	}
+}
+.counter-box {
+	background: transparent;
+	padding: 30px 0px 35px;
+	.icon {
+		img {
+			width: auto;
+		}
+	}
+	.heading-box {
+		width: 100%;
+		padding: 25px 0px;
+		margin: 35px 0px 20px;
+		border-right: 1px solid rgba(112, 112, 112, 0.19);
+		h3 {
+			font-size: 25px;
+			line-height: 33px;
+			font-weight: 600;
+			text-transform: capitalize;
+		}
+		h4 {
+			font-size: 25px;
+			line-height: 33px;
+			font-weight: 300;
+			text-transform: capitalize;
+			color: #9eaac1;
+		}
+	}
+	.content {
+		p {
+			padding: 0px 15px;
+		}
+	}
+	@include respond(phone) {
+		.heading-box {
+			padding: 18px 0px;
+			margin: 20px 0px 12px;
+		}
+	}
+}
+// Counter User Section End
+
+// about testimonial carousel start
+.about-testimonial-sec {
+	padding: 30px 0px 50px;
+	.section-title {
+		p {
+			max-width: 650px;
+		}
+	}
+	.owl-carousel .owl-dots button {
+		width: 60px;
+		background: rgba(201, 202, 203, 0.2);
+	}
+	.owl-carousel .owl-dots button.active {
+		width: 60px;
+		background: rgba(108, 49, 242, 1);
+	}
+}
+.about-testimonial {
+	.company-logo {
+		width: 100%;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		img {
+			width: auto;
+		}
+	}
+	.item-card-body {
+		margin: 40px 0px 20px;
+	}
+	@include carousel-nav;
+}
+// about testimonial carousel end
+
+// about feature section start
+.about-feature-sec {
+	.icon-box-item-v2 {
+		display: block;
+		.icon {
+			background: transparent;
+			box-shadow: none;
+		}
+	}
+}
+// about feature section end

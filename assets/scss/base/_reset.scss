@@ -1,0 +1,707 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	background: transparent;
+	font-family: "Euclid Circular A";
+	font-size: 13px;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		outline: 0px;
+	}
+}
+
+// Custom Container
+.container-fluid {
+	max-width: 1483px;
+}
+
+// Font
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/font/EuclidCircularA-Italic.eot");
+	src: url("../fonts/EuclidCircularA-Italic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-Italic.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-Italic.woff") format("woff"),
+		url("../fonts/EuclidCircularA-Italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-Bold.eot");
+	src: url("../fonts/EuclidCircularA-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-Bold.woff2") format("woff2"), url("../fonts/EuclidCircularA-Bold.woff") format("woff"),
+		url("../fonts/EuclidCircularA-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-BoldItalic.eot");
+	src: url("../fonts/EuclidCircularA-BoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-BoldItalic.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-BoldItalic.woff") format("woff"),
+		url("../fonts/EuclidCircularA-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-MediumItalic.eot");
+	src: url("../fonts/EuclidCircularA-MediumItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-MediumItalic.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-MediumItalic.woff") format("woff"),
+		url("../fonts/EuclidCircularA-MediumItalic.ttf") format("truetype");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-SemiBoldItalic.eot");
+	src: url("../fonts/EuclidCircularA-SemiBoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-SemiBoldItalic.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-SemiBoldItalic.woff") format("woff"),
+		url("../fonts/EuclidCircularA-SemiBoldItalic.ttf") format("truetype");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-LightItalic.eot");
+	src: url("../fonts/EuclidCircularA-LightItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-LightItalic.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-LightItalic.woff") format("woff"),
+		url("../fonts/EuclidCircularA-LightItalic.ttf") format("truetype");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-Regular.eot");
+	src: url("../fonts/EuclidCircularA-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-Regular.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-Regular.woff") format("woff"),
+		url("../fonts/EuclidCircularA-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-Medium.eot");
+	src: url("../fonts/EuclidCircularA-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-Medium.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-Medium.woff") format("woff"),
+		url("../fonts/EuclidCircularA-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-Light.eot");
+	src: url("../fonts/EuclidCircularA-Light.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-Light.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-Light.woff") format("woff"),
+		url("../fonts/EuclidCircularA-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Euclid Circular A";
+	src: url("../fonts/EuclidCircularA-SemiBold.eot");
+	src: url("../fonts/EuclidCircularA-SemiBold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/EuclidCircularA-SemiBold.woff2") format("woff2"),
+		url("../fonts/EuclidCircularA-SemiBold.woff") format("woff"),
+		url("../fonts/EuclidCircularA-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Circular Std
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../fonts/CircularStd-BoldItalic.eot");
+	src: url("../fonts/CircularStd-BoldItalic.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/CircularStd-BoldItalic.woff2") format("woff2"),
+		url("../fonts/CircularStd-BoldItalic.woff") format("woff"),
+		url("../fonts/CircularStd-BoldItalic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../fonts/CircularStd-Black.eot");
+	src: url("../fonts/CircularStd-Black.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/CircularStd-Black.woff2") format("woff2"), url("../fonts/CircularStd-Black.woff") format("woff"),
+		url("../fonts/CircularStd-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../fonts/CircularStd-Bold.eot");
+	src: url("../fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/CircularStd-Bold.woff2") format("woff2"), url("../fonts/CircularStd-Bold.woff") format("woff"),
+		url("../fonts/CircularStd-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std Book";
+	src: url("../fonts/CircularStd-Book.eot");
+	src: url("../fonts/CircularStd-Book.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/CircularStd-Book.woff2") format("woff2"), url("../fonts/CircularStd-Book.woff") format("woff"),
+		url("../fonts/CircularStd-Book.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Circular Std";
+	src: url("../fonts/CircularStd-Medium.eot");
+	src: url("../fonts/CircularStd-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/CircularStd-Medium.woff2") format("woff2"), url("../fonts/CircularStd-Medium.woff") format("woff"),
+		url("../fonts/CircularStd-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+// Font
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $fontEuclid;
+	margin: 0;
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 67px;
+	font-weight: $fontBold;
+	color: $clrheading;
+
+	@include respond(phone) {
+		font-size: 40px;
+		line-height: 50px;
+	}
+	@include respond(phone-sm) {
+		font-size: 29px;
+		line-height: 40px;
+	}
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 53px;
+	font-weight: $fontRegular;
+	color: $clrheading;
+
+	@include respond(phone-sm) {
+		font-size: 30px !important;
+		line-height: 38px;
+	}
+}
+
+h4 {
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: $fontRegular;
+	color: $clrheading;
+}
+
+figure {
+	margin: 0;
+}
+
+p {
+	font-family: $fontEuclid;
+	color: $clrContent;
+	font-size: 16px;
+	font-weight: $fontRegular;
+	line-height: 28px;
+	margin-bottom: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+@include section-title;
+
+ul,
+li {
+	list-style: none;
+	text-decoration: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+section {
+	display: block;
+	position: relative;
+	padding: 35px 0;
+	width: 100%;
+
+	@include respond(phone) {
+		padding: 40px 0 !important;
+	}
+}
+
+.column-revers {
+	@include respond(tabport) {
+		flex-direction: column-reverse;
+	}
+}
+
+.bg-color {
+	background: #f3f7fe;
+}
+
+.bg-soft-red {
+	background: #ffecec;
+}
+.bg-soft-yellow {
+	background: #fefcef;
+}
+.bg-soft-blue {
+	background: #eeeefb;
+}
+.bg-soft-gray {
+	background: #ecebef;
+}
+
+@media (min-width: 479px) and (max-width: 576px) {
+	.col-xs-6 {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+}
+
+// Padding-Top
+
+.pt-5 {
+	padding-top: 5px !important;
+}
+.pt-10 {
+	padding-top: 10px !important;
+}
+.pt-15 {
+	padding-top: 15px !important;
+}
+.pt-20 {
+	padding-top: 20px !important;
+}
+.pt-25 {
+	padding-top: 25px !important;
+}
+.pt-30 {
+	padding-top: 30px !important;
+}
+.pt-35 {
+	padding-top: 35px !important;
+}
+.pt-40 {
+	padding-top: 40px !important;
+}
+.pt-45 {
+	padding-top: 45px !important;
+}
+.pt-50 {
+	padding-top: 50px !important;
+}
+.pt-55 {
+	padding-top: 55px !important;
+}
+.pt-60 {
+	padding-top: 60px !important;
+}
+.pt-65 {
+	padding-top: 65px !important;
+}
+.pt-70 {
+	padding-top: 70px !important;
+}
+.pt-80 {
+	padding-top: 80px !important;
+}
+
+// Padding-bottom
+
+.pb-5 {
+	padding-bottom: 5px !important;
+}
+.pb-10 {
+	padding-bottom: 10px !important;
+}
+.pb-15 {
+	padding-bottom: 15px !important;
+}
+.pb-20 {
+	padding-bottom: 20px !important;
+}
+.pb-25 {
+	padding-bottom: 25px !important;
+}
+.pb-30 {
+	padding-bottom: 30px !important;
+}
+.pb-35 {
+	padding-bottom: 35px !important;
+}
+.pb-40 {
+	padding-bottom: 40px !important;
+}
+.pb-45 {
+	padding-bottom: 45px !important;
+}
+.pb-50 {
+	padding-bottom: 50px !important;
+}
+.pb-55 {
+	padding-bottom: 55px !important;
+}
+.pb-60 {
+	padding-bottom: 60px !important;
+}
+.pb-65 {
+	padding-bottom: 65px !important;
+}
+.pb-70 {
+	padding-bottom: 70px !important;
+}
+.pb-80 {
+	padding-bottom: 80px !important;
+}
+
+// Padding-Right
+
+.pr-5 {
+	padding-right: 5px !important;
+}
+.pr-10 {
+	padding-right: 10px !important;
+}
+.pr-15 {
+	padding-right: 15px !important;
+}
+.pr-20 {
+	padding-right: 20px !important;
+}
+.pr-25 {
+	padding-right: 25px !important;
+}
+.pr-30 {
+	padding-right: 30px !important;
+}
+.pr-35 {
+	padding-right: 35px !important;
+}
+.pr-40 {
+	padding-right: 40px !important;
+}
+.pr-45 {
+	padding-right: 45px !important;
+}
+.pr-50 {
+	padding-right: 50px !important;
+}
+.pr-55 {
+	padding-right: 55px !important;
+}
+.pr-60 {
+	padding-right: 60px !important;
+}
+.pr-65 {
+	padding-right: 65px !important;
+}
+.pr-70 {
+	padding-right: 70px !important;
+}
+.pr-80 {
+	padding-right: 80px !important;
+}
+
+// Padding-Left
+
+.pl-5 {
+	padding-left: 5px !important;
+}
+.pl-10 {
+	padding-left: 10px !important;
+}
+.pl-15 {
+	padding-left: 15px !important;
+}
+.pl-20 {
+	padding-left: 20px !important;
+}
+.pl-25 {
+	padding-left: 25px !important;
+}
+.pl-30 {
+	padding-left: 30px !important;
+}
+.pl-35 {
+	padding-left: 35px !important;
+}
+.pl-40 {
+	padding-left: 40px !important;
+}
+.pl-45 {
+	padding-left: 45px !important;
+}
+.pl-50 {
+	padding-left: 50px !important;
+}
+.pl-55 {
+	padding-left: 55px !important;
+}
+.pl-60 {
+	padding-left: 60px !important;
+}
+.pl-65 {
+	padding-left: 65px !important;
+}
+.pl-70 {
+	padding-left: 70px !important;
+}
+.pl-80 {
+	padding-left: 80px !important;
+}
+
+// Margin-Top
+
+.mt-5 {
+	margin-top: 5px !important;
+}
+.mt-10 {
+	margin-top: 10px !important;
+}
+.mt-15 {
+	margin-top: 15px !important;
+}
+.mt-20 {
+	margin-top: 20px !important;
+}
+.mt-25 {
+	margin-top: 25px !important;
+}
+.mt-30 {
+	margin-top: 30px !important;
+}
+.mt-35 {
+	margin-top: 35px !important;
+}
+.mt-40 {
+	margin-top: 40px !important;
+}
+.mt-45 {
+	margin-top: 45px !important;
+}
+.mt-50 {
+	margin-top: 50px !important;
+}
+.mt-55 {
+	margin-top: 55px !important;
+}
+.mt-60 {
+	margin-top: 60px !important;
+}
+.mt-65 {
+	margin-top: 65px !important;
+}
+.mt-70 {
+	margin-top: 70px !important;
+}
+.mt-80 {
+	margin-top: 80px !important;
+}
+
+// Margin-bottom
+
+.mb-5 {
+	margin-bottom: 5px !important;
+}
+.mb-10 {
+	margin-bottom: 10px !important;
+}
+.mb-15 {
+	margin-bottom: 15px !important;
+}
+.mb-20 {
+	margin-bottom: 20px !important;
+}
+.mb-25 {
+	margin-bottom: 25px !important;
+}
+.mb-30 {
+	margin-bottom: 30px !important;
+}
+.mb-35 {
+	margin-bottom: 35px !important;
+}
+.mb-40 {
+	margin-bottom: 40px !important;
+}
+.mb-45 {
+	margin-bottom: 45px !important;
+}
+.mb-50 {
+	margin-bottom: 50px !important;
+}
+.mb-55 {
+	margin-bottom: 55px !important;
+}
+.mb-60 {
+	margin-bottom: 60px !important;
+}
+.mb-65 {
+	margin-bottom: 65px !important;
+}
+.mb-70 {
+	margin-bottom: 70px !important;
+}
+.mb-80 {
+	margin-bottom: 80px !important;
+}
+
+// Margin-Right
+
+.mr-5 {
+	margin-right: 5px !important;
+}
+.mr-10 {
+	margin-right: 10px !important;
+}
+.mr-15 {
+	margin-right: 15px !important;
+}
+.mr-20 {
+	margin-right: 20px !important;
+}
+.mr-25 {
+	margin-right: 25px !important;
+}
+.mr-30 {
+	margin-right: 30px !important;
+}
+.mr-35 {
+	margin-right: 35px !important;
+}
+.mr-40 {
+	margin-right: 40px !important;
+}
+.mr-45 {
+	margin-right: 45px !important;
+}
+.mr-50 {
+	margin-right: 50px !important;
+}
+.mr-55 {
+	margin-right: 55px !important;
+}
+.mr-60 {
+	margin-right: 60px !important;
+}
+.mr-65 {
+	margin-right: 65px !important;
+}
+.mr-70 {
+	margin-right: 70px !important;
+}
+.mr-80 {
+	margin-right: 80px !important;
+}
+
+// Margin-Left
+
+.ml-5 {
+	margin-left: 5px !important;
+}
+.ml-10 {
+	margin-left: 10px !important;
+}
+.ml-15 {
+	margin-left: 15px !important;
+}
+.ml-20 {
+	margin-left: 20px !important;
+}
+.ml-25 {
+	margin-left: 25px !important;
+}
+.ml-30 {
+	margin-left: 30px !important;
+}
+.ml-35 {
+	margin-left: 35px !important;
+}
+.ml-40 {
+	margin-left: 40px !important;
+}
+.ml-45 {
+	margin-left: 45px !important;
+}
+.ml-50 {
+	margin-left: 50px !important;
+}
+.ml-55 {
+	margin-left: 55px !important;
+}
+.ml-60 {
+	margin-left: 60px !important;
+}
+.ml-65 {
+	margin-left: 65px !important;
+}
+.ml-70 {
+	margin-left: 70px !important;
+}
+.ml-80 {
+	margin-left: 80px !important;
+}

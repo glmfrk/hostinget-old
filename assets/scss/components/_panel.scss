@@ -1,0 +1,32 @@
+// Panel Section Start
+
+.panel-section {
+	background: url('../images/panel/panel-bg.svg');
+	@include banner-size;
+	padding: 64px 0px 46px;
+}
+
+.panel-image {
+	img {
+		max-width: 400px;
+		height: auto;
+		display: block;
+		margin: auto;
+	}
+}
+
+.panel-wrapper {
+	.panel-content {
+		max-width: 580px;
+		h2 {
+			color: $clrdefault;
+			margin-bottom: 15px;
+			max-width: 480px;
+		}
+		p {
+			color: $clrdefault;
+		}
+	}
+}
+
+// Panel Section End

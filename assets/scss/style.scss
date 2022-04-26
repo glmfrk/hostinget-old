@@ -1,0 +1,102 @@
+/*-------------------------------------
+    Template Name: Hostinget - Html Template
+    Description: Hostinget - Html Template
+    Version: 1.0
+    Tags: 
+---------------------------------------*/
+
+// ---------------------------------------*/
+/*
+    Table of Context
+    -------------------------------
+    01. Common SCSS
+    02. Content Box
+    03. Icon Box
+    04. Order, Unorder List
+    05. Round One side 
+    06. Video side 
+    07. Overlap Image Box
+    08. Image Box
+
+    01. Header style
+    02. Banner style
+    03. Block style
+    04. About Section
+    05. Counter Section
+    06. Release Section
+    07. Team Section
+    08. Match Section
+    09. Stream Scetion
+    10. Product Section
+    11. Partner Section
+    12. Blog Section
+    13. CTA Section
+    14. Footer section
+    
+
+/**
+ * Fonts 
+ * PoppinsSofia Pro
+ * Roboto
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(../webfonts/SofiaProBlack.ttf);
+}
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(../webfonts/SofiaProBold.ttf);
+}
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(../webfonts/SofiaProLight.ttf);
+}
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(../webfonts/SofiaProMedium.ttf);
+}
+@font-face {
+	font-family: "Sofia Pro";
+	src: url(../webfonts/SofiaProRegular.ttf);
+}
+
+// Partial files
+@import "base/variables";
+@import "base/functions";
+@import "base/mixins";
+@import "base/reset";
+@import "base/global";
+@import "components/button";
+@import "components/header";
+@import "components/banner";
+@import "components/icon-box";
+@import "components/feature";
+@import "components/solution";
+@import "components/inform";
+@import "components/testimonial";
+@import "components/footer";
+@import "components/tabs";
+@import "components/pricing";
+@import "components/choose";
+@import "components/contact-form";
+@import "components/image-box";
+@import "components/product";
+@import "components/brand-logo";
+@import "components/domain-blog";
+@import "components/panel";
+@import "components/accordion";
+@import "components/platform";
+@import "components/package";
+@import "components/ssl";
+@import "components/dedicated";
+@import "components/about-us";
+@import "components/rental-server";
+
+/**
+ *
+ * Common CSS
+ *
+ */

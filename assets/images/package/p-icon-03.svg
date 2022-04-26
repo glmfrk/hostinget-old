@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="85" height="85" viewBox="0 0 85 85">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_3133" data-name="Path 3133" d="M0,0H32V32H0Z" fill="#ee672f"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2959" data-name="Group 2959" transform="translate(-1442 -3356)">
+    <rect id="Rectangle_933" data-name="Rectangle 933" width="85" height="85" rx="12" transform="translate(1442 3356)" fill="#fff0ea"/>
+    <g id="magento_1_" data-name="magento (1)" transform="translate(1469 3383)" clip-path="url(#clip-path)">
+      <path id="Path_3132" data-name="Path 3132" d="M16,32l-5.94-3.429v-16l3.96-2.287v16l1.98,1.2,1.98-1.2v-16l3.961,2.287v16ZM29.855,8V24L25.9,26.285v-16L16,4.573,6.1,10.284v16L2.145,24V8L16,0Z" fill="#ee672f"/>
+    </g>
+  </g>
+</svg>

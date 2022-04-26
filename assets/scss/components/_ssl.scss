@@ -1,0 +1,145 @@
+// ssl-slides-section Start
+
+.ssl-slides-section {
+	position: relative;
+	margin-top: -15%;
+	@media (max-width: 1600px) {
+		margin-top: 0;
+	}
+}
+.hosting-slide {
+	display: block;
+}
+.ssl-certificate-wrapper {
+	.table-pricing {
+		@include respond(tabland) {
+			justify-content: flex-start;
+			flex-wrap: nowrap;
+		}
+		.tbl-price-wrapper {
+			flex-basis: 15%;
+			padding: 0;
+
+			.hosting_feature_list {
+				border: none;
+				ul li {
+					font-size: 16px;
+					line-height: 21px;
+					padding: 8px 0px;
+					min-height: 60px;
+					padding-left: 35px;
+					display: flex;
+					align-items: center;
+
+					@include respond(medium) {
+						padding-left: 10px;
+					}
+					@include respond(tabland) {
+						padding-left: 35px;
+					}
+					@include respond(tabport) {
+						padding-left: 10px;
+						font-size: 14px;
+					}
+
+					&:nth-child(odd) {
+						background: #f3f7fe;
+					}
+					&:nth-child(even) {
+						background: transparent;
+					}
+
+					span {
+						color: $clrContent;
+						display: block;
+					}
+					.icon {
+						margin: auto;
+					}
+					.pricing-btn {
+						a {
+							font-size: 14px;
+							line-height: 19px;
+							font-weight: $fontRegular;
+							color: $clrdefault;
+							display: inline-block;
+							padding: 8px 27px;
+							border-radius: 15px;
+							background: $clrGreen;
+							transition: $transition;
+
+							&:hover {
+								background: $clrPrimary;
+							}
+						}
+					}
+				}
+				.header-top-item {
+					height: 60px;
+					padding: 21px 0px 21px 35px;
+					background: #cfd9ea;
+
+					@include respond(medium) {
+						padding-left: 10px;
+					}
+
+					// border-radius: 0px 15px 0px 0px;
+
+					h6 {
+						font-size: 16px;
+						font-weight: $fontMid;
+						color: $clrheading;
+					}
+				}
+			}
+			&:nth-of-type(1) {
+				box-shadow: -10px 0px 10px #f5f5f5;
+				border-top-left-radius: 15px;
+				.header-top-item {
+					background: transparent;
+				}
+				li {
+					&:nth-child(odd) {
+						background: transparent !important;
+					}
+				}
+			}
+			&:nth-of-type(2) {
+				flex-basis: 20%;
+				.hosting_feature_list {
+					ul li {
+						display: block;
+					}
+				}
+			}
+			&:nth-of-type(3) {
+				flex-basis: 10%;
+			}
+			&:nth-of-type(4) {
+				flex-basis: 15%;
+			}
+			&:nth-of-type(5) {
+				flex-basis: 10%;
+			}
+			&:nth-of-type(6) {
+				flex-basis: 10%;
+			}
+			&:nth-of-type(7) {
+				flex-basis: 20%;
+			}
+		}
+	}
+}
+
+// ssl-slides-section End
+
+.about-section {
+	.overflow {
+		overflow: hidden;
+	}
+}
+.about-image {
+	@include respond(tabport) {
+		margin-bottom: 30px;
+	}
+}

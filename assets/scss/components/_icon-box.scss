@@ -1,0 +1,275 @@
+// Icon-box Start
+
+.icon-box-item {
+	background: #fcfcfe;
+	border-radius: 16px;
+	padding: 30px 17px 35px;
+	transition: $transition;
+	.icon {
+		img {
+			width: 95px;
+			height: auto;
+			display: block;
+			margin: 0 auto 14px;
+		}
+	}
+	.content {
+		h4 a {
+			display: block;
+			color: $clrheading;
+			margin-bottom: 24px;
+			font-weight: $fontRegular;
+			transition: $transition;
+
+			&:hover {
+				color: $clrPrimary;
+			}
+		}
+		p {
+			font-weight: $fontLight;
+			font-size: 16px;
+		}
+	}
+	@include respond(tabland) {
+		margin-bottom: 30px;
+	}
+	&:hover {
+		background: $clrdefault;
+		box-shadow: 0px 30px 33px rgba(86, 86, 86, 0.16);
+	}
+}
+// Icon-box Ensd
+
+// Icon Box V2 Start
+.icon-box-item-v2 {
+	display: flex;
+	margin-bottom: 67px;
+
+	.icon {
+		height: 50px;
+		width: 50px;
+		margin-right: 17px;
+		background: $clrdefault;
+		border-radius: 50%;
+		@include flex-box;
+		box-shadow: 0px 0px 10px rgba(165, 165, 165, 0.16);
+
+		img {
+			width: auto;
+			height: auto;
+			display: block;
+		}
+	}
+	.content {
+		flex: 1;
+
+		h4 a {
+			color: $clrheading;
+			display: block;
+			margin-bottom: 25px;
+			transition: $transition;
+
+			&:hover {
+				color: $clrPrimary;
+			}
+		}
+		p {
+			font-size: 16px;
+			font-weight: $fontRegular;
+			line-height: 28px;
+		}
+	}
+}
+// Icon Box V2 End
+
+// Icon Box V3 Start
+.icon-box-item-v3 {
+	background: $clrdefault;
+	border-radius: 15px;
+	padding: 26px 20px 20px 13px;
+	box-shadow: 0px 50px 50px rgba(0, 0, 0, 0.16);
+	margin-bottom: 30px;
+	.icon {
+		height: 59px;
+		width: 59px;
+		border-radius: 5px;
+		@include flex-box;
+		margin: auto;
+		margin-bottom: 12px;
+		img,
+		svg {
+			width: auto;
+			height: auto;
+			display: block;
+			transition: $transition;
+		}
+		@include respond(phone) {
+			margin: 0 auto 12px;
+		}
+	}
+	.content {
+		text-align: center;
+		h5 a {
+			font-size: 18px;
+			line-height: 24px;
+			color: $clrheading;
+			font-weight: $fontMid;
+			display: block;
+			margin-bottom: 13px;
+			transition: $transition;
+			&:hover {
+				color: $clrPrimary;
+			}
+		}
+		p {
+			font-size: 14px;
+			line-height: 19px;
+		}
+		.bottom-content {
+			margin-top: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.price {
+				font-family: $fontEuclid;
+				font-size: 24px;
+				font-weight: $fontBold;
+				line-height: 32px;
+				color: $clrheading;
+
+				small {
+					font-size: 14px;
+					line-height: 19px;
+					font-weight: $fontRegular;
+					color: $clrContent;
+				}
+			}
+			.more-btn {
+				a {
+					height: 20px;
+					width: 20px;
+					border-radius: 50%;
+					background: rgba(120, 125, 167, 0.25);
+					@include flex-box;
+					color: $clrContent;
+					font-size: 10px;
+					transition: $transition;
+
+					&:hover {
+						background: $clrPrimary;
+						color: $clrdefault;
+					}
+				}
+			}
+		}
+		@include respond(phone) {
+			text-align: center;
+		}
+	}
+	&:hover {
+		.icon {
+			img,
+			svg {
+				transform: scale(1.1);
+			}
+		}
+	}
+}
+// Icon Box V3 End
+
+// Icon Box V4 Start
+.icon-box-item-v4 {
+	background: $clrdefault;
+	padding: 0;
+	margin-top: 48px;
+	.icon {
+		img {
+			margin: 0px 0px 35px;
+
+			@include respond(phone) {
+				margin: 0px auto 35px;
+			}
+		}
+	}
+	&:hover {
+		box-shadow: none;
+	}
+	@include respond(phone) {
+		text-align: center;
+	}
+}
+
+.choose-btn {
+	a {
+		font-family: $fontEuclid;
+		font-size: 16px;
+		font-weight: $fontRegular;
+		line-height: 21px;
+		color: $clrdefault;
+		background: $clryellow;
+		padding: 21px 66px;
+		display: inline-block;
+		border-radius: 30px;
+		transition: $transition;
+
+		&:hover {
+			background: $clrheading;
+		}
+	}
+}
+
+// Icon Box V5 Start
+
+.icon-box-item-v5 {
+	padding: 42px 15px 40px;
+	box-shadow: 0px 10px 20px rgba(207, 207, 207, 0.5);
+	margin-bottom: 40px;
+	.icon {
+		img {
+			margin: 0 auto 24px;
+		}
+	}
+	&:hover {
+		box-shadow: 0px 10px 20px rgba(207, 207, 207, 0.5);
+	}
+}
+
+// VPS Highlight Service Start
+.vps-highlightService-item {
+	padding: 20px;
+	.icon {
+		width: 72px;
+		height: 72px;
+		background: $clrdefault;
+		border-radius: 15px;
+		transition: $transition;
+		box-shadow: 0px 10px 30px rgba(229, 229, 229, 0.6);
+		img {
+			width: auto;
+		}
+	}
+	&:hover {
+		.icon {
+			box-shadow: 0px 50px 50px rgba($color: #000000, $alpha: 0.16);
+		}
+	}
+	@include respond(tabport) {
+		padding: 30px 20px;
+		margin-bottom: 30px;
+		display: block;
+		text-align: center;
+		.icon {
+			margin: 10px auto 20px;
+		}
+		.content {
+			h4 {
+				font-size: 22px;
+				a {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+}
+// VPS Highlight Service End

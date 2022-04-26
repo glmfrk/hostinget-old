@@ -1,0 +1,66 @@
+// Package Sction Start
+
+.package-section {
+	overflow: hidden;
+}
+
+.package-slider {
+	background: url('../images/package/package-bg.svg');
+	@include banner-size;
+	// background-size: auto;
+	@include carousel-nav;
+	margin-top: 140px;
+
+	.owl-carousel {
+		.owl-dots {
+			display: none;
+		}
+		.owl-nav {
+			display: block;
+			top: 65%;
+			left: 0;
+
+			.owl-prev {
+				position: absolute;
+				left: -51px;
+				top: 0 !important;
+				right: auto;
+
+				@include respond(medium) {
+					left: -10px;
+				}
+				@include respond(tabland) {
+					left: -25px;
+				}
+				@include respond(phone) {
+					left: 25px;
+				}
+			}
+			.owl-next {
+				position: absolute;
+				right: -51px;
+				top: 0 !important;
+				left: auto;
+				@include respond(medium) {
+					right: -10px;
+				}
+				@include respond(tabland) {
+					right: -25px;
+				}
+				@include respond(phone) {
+					right: 25px;
+				}
+			}
+			@include respond(phone) {
+				top: 50%;
+			}
+		}
+	}
+
+	.package-slide {
+		position: relative;
+		top: -180px;
+	}
+}
+
+// Package Sction End

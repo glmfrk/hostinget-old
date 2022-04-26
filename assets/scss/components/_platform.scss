@@ -1,0 +1,28 @@
+// Platform Section Start
+
+.why-platform {
+	padding-bottom: 107px;
+	position: relative;
+	margin-top: -170px;
+	z-index: 111;
+}
+
+.flatform-wrapper {
+	.content-wrapper {
+		h2 {
+			margin-bottom: 28px;
+		}
+		p {
+			max-width: 340px;
+
+			@include respond(tabport) {
+				max-width: 100%;
+			}
+		}
+		@include respond(tabport) {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+// Platform Section End

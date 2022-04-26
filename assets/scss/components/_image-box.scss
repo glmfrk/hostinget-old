@@ -1,0 +1,62 @@
+// Image Box Start
+/* Domain Services Styles Here Start */
+
+.image-item-box {
+	background: transparent;
+	margin-bottom: 10px;
+
+	.item-image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 215px;
+		border-radius: 20px;
+		background: rgba(29, 102, 255, 0.1);
+		padding: 24px 20px;
+
+		img {
+			width: 100%;
+		}
+		&.v2 {
+			img {
+				width: 82%;
+			}
+		}
+	}
+	.item-content {
+		background: #fff;
+		padding-top: 26px;
+		padding-bottom: 12px;
+		text-align: center;
+
+		h3 {
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 32px;
+			color: $clrheading;
+			margin-bottom: 15px;
+			display: block;
+		}
+		p {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+			color: #787da7;
+		}
+	}
+}
+
+.solid-link {
+	text-align: center;
+	margin-top: 13px;
+
+	a {
+		color: $clrPrimary;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 28px;
+		text-decoration: underline !important;
+	}
+}
+/* Domain Services Styles Here Done */

@@ -1,0 +1,1049 @@
+// Pricing Start
+
+.hosting-pricing {
+	padding-top: 95px;
+}
+
+.pricing-wraping {
+	background-color: $clrdefault;
+	text-align: center;
+	padding: 0px 15px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px rgba(237, 237, 237, 0.16);
+
+	@include respond(tabland) {
+		margin-top: 40px;
+	}
+	.pricing-logo {
+		img {
+			width: auto;
+			height: auto;
+			display: block;
+			margin: auto;
+			position: relative;
+			top: 0;
+		}
+	}
+	.pricing-header-wrapper {
+		padding-bottom: 5px;
+		.pricing-header {
+			font-family: $fontEuclid;
+			display: block;
+			color: $clrheading;
+			font-size: 24px;
+			line-height: 32px;
+			text-transform: capitalize;
+			font-weight: $fontRegular;
+			transition: $transition;
+		}
+		span {
+			font-family: $fontEuclid;
+			font-size: 12px;
+			line-height: 35px;
+			font-weight: $fontRegular;
+			color: $clrContent;
+			display: block;
+			margin-top: 3px;
+		}
+	}
+	.pricing-list {
+		border-bottom: 1px solid rgba(112, 112, 112, 0.11);
+		border-top: 1px solid rgba(112, 112, 112, 0.11);
+		padding: 32px 0px;
+		li {
+			font-size: 16px;
+			font-weight: $fontLight;
+			color: $clrContent;
+			margin-bottom: 13px;
+			text-transform: capitalize;
+
+			span {
+				font-weight: $fontSemi;
+			}
+		}
+	}
+	.main-pricing {
+		font-family: $fontEuclid;
+		font-size: 24px;
+		line-height: 32px;
+		color: $clrheading;
+		font-weight: $fontBold;
+		padding-top: 15px;
+
+		span {
+			font-size: 16px;
+			font-weight: $fontLight;
+			color: $clrContent;
+			position: relative;
+			margin-right: 8px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background: #fd0354;
+				transform: translateY(-50%) rotate(-20deg);
+			}
+		}
+		small {
+			font-size: 14px;
+			font-weight: $fontLight;
+			line-height: 19px;
+			color: $clrContent;
+		}
+	}
+	.content {
+		p {
+			font-size: 14px;
+			line-height: 20px;
+			color: $clrContent;
+			margin-top: 8px;
+		}
+	}
+	.pricing-btn {
+		position: relative;
+		bottom: -20px;
+		a {
+			font-family: $fontCircular;
+			font-size: 16px;
+			line-height: 21px;
+			display: inline-block;
+			color: $clrdefault;
+			font-weight: $fontRegular;
+			background: $clrGreen;
+			border-radius: 15px;
+			padding: 8px 37px;
+			transition: $transition;
+			@include respond(medium) {
+				padding: 8px 30px;
+			}
+		}
+	}
+	&:hover {
+		.pricing-btn a {
+			background: $clrPrimary;
+		}
+	}
+}
+
+// ====================================
+// Hosting Pricing Table Start
+// ====================================
+.table-pricing {
+	display: flex;
+	justify-content: space-between;
+
+	@include respond(tabland) {
+		// flex-wrap: wrap;
+	}
+	.pricing-title {
+		min-height: 150px;
+		position: relative;
+
+		@include respond(phone-sm) {
+			// min-height: auto;
+		}
+		h5 {
+			font-family: $fontEuclid;
+			font-size: 16px;
+			font-weight: $fontMid;
+			color: $clrheading;
+			line-height: 26px;
+			position: absolute;
+			bottom: 10px;
+
+			@include respond(phone-sm) {
+				// position: relative;
+				// bottom: 0;
+			}
+		}
+	}
+
+	.tbl-price-wrapper {
+		padding: 17px 0px;
+		border-radius: 15px;
+		max-width: 25%;
+		flex-basis: 25%;
+
+		// @include respond(tabland) {
+		// 	flex-basis: 50%;
+		// 	max-width: 50%;
+		// 	margin-bottom: 30px;
+		// }
+		@include respond(phone-sm) {
+			flex-basis: 100%;
+			max-width: 100%;
+		}
+
+		.header-top {
+			.icon {
+				height: 32px;
+				width: 32px;
+				background: #e9efff;
+				border-radius: 50%;
+				@include flex-box;
+				margin: auto;
+
+				img {
+					width: auto;
+					height: auto;
+					display: block;
+				}
+			}
+			.title-box {
+				h5 {
+					font-family: $fontEuclid;
+					font-size: 16px;
+					font-weight: $fontBold;
+					color: $clrheading;
+					line-height: 45px;
+					position: relative;
+					bottom: 0;
+				}
+				p {
+					font-size: 12px;
+					font-weight: $fontRegular;
+					color: $clrheading;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					img,
+					svg {
+						width: 13px;
+						height: auto;
+						display: block;
+						margin-left: 4px;
+					}
+				}
+			}
+			.main-pricing {
+				font-family: $fontEuclid;
+				font-size: 30px;
+				line-height: 33px;
+				color: $clrheading;
+				font-weight: $fontBold;
+
+				small {
+					font-size: 17px;
+					font-weight: $fontLight;
+					color: $clrheading;
+				}
+			}
+			.pricing-btn a {
+				font-family: $fontEuclid;
+				font-size: 14px;
+				line-height: 19px;
+				display: inline-block;
+				color: $clrdefault;
+				font-weight: $fontRegular;
+				background: $clrGreen;
+				border-radius: 15px;
+				padding: 8px 27px;
+				transition: $transition;
+				margin-top: 10px;
+			}
+		}
+		&.active {
+			background: $clrPrimary;
+
+			small,
+			.pricing-title,
+			.main-pricing,
+			h5,
+			ul li {
+				color: $clrdefault !important;
+				i {
+					color: $clrdefault;
+				}
+				&:nth-child(even) {
+					background: transparent;
+				}
+				.icon {
+					color: $clrdefault;
+					&::after {
+						background: rgba(220, 244, 216, 0.25) !important;
+					}
+				}
+			}
+			p {
+				color: $clrdefault !important;
+				svg path {
+					fill: $clrdefault;
+				}
+			}
+			.pricing-btn a {
+				background: $clrdefault;
+				color: $clrPrimary;
+			}
+		}
+	}
+	.hosting_feature_list {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+		border-top: 1px solid rgba(0, 0, 0, 0.11);
+		margin-top: 5px;
+		ul {
+			li {
+				font-family: $fontEuclid;
+				font-size: 16px;
+				line-height: 65px;
+				padding: 0px 6.5px;
+				color: $clrheading;
+				font-weight: $fontRegular;
+				// border-radius: 15px;
+
+				&:nth-child(even) {
+					background: #f3f7fe;
+				}
+				.icon {
+					color: $clrGreen;
+					position: relative;
+					z-index: 1;
+
+					&::after {
+						content: "";
+						position: absolute;
+						height: 35px;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 35px;
+						border-radius: 50%;
+						text-align: center;
+						line-height: 35px;
+						color: $clrGreen;
+						background: rgba(220, 244, 216, 0.25);
+						z-index: -1;
+					}
+					&.red {
+						color: #f92424;
+						&::after {
+							background: rgba(255, 214, 213, 0.25);
+						}
+					}
+				}
+			}
+			&.icon-list {
+				li {
+					display: flex;
+					align-items: center;
+					white-space: nowrap;
+					width: 100%;
+
+					svg {
+						margin-right: 10px;
+					}
+					.info-icon {
+						img {
+							width: 12px;
+							height: auto;
+							margin-right: 0;
+							margin-left: 18px;
+						}
+						.discount a {
+							margin-left: 16px;
+							font-size: 12px;
+							line-height: 16px;
+							color: $clrdefault;
+							padding: 3px 11px;
+							display: inline-block;
+							background: $clrGreen;
+							border-radius: 5px;
+
+							@include respond(phone-sm) {
+								margin-left: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// Hosting Pricing Table End
+
+// Main Pricing Start
+.main-pricing {
+	font-family: $fontEuclid;
+	font-size: 24px;
+	line-height: 32px;
+	color: $clrheading;
+	font-weight: $fontBold;
+	padding-top: 15px;
+
+	span {
+		font-size: 16px;
+		font-weight: $fontLight;
+		color: $clrContent;
+		position: relative;
+		margin-right: 8px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background: #fd0354;
+			transform: translateY(-50%) rotate(-20deg);
+		}
+	}
+	small {
+		font-size: 14px;
+		font-weight: $fontLight;
+		line-height: 19px;
+		color: $clrContent;
+	}
+}
+// Main Pricing End
+
+// ===========================
+// Domain Pricing Start
+// ===========================
+
+.domain-pricing {
+	display: block;
+	position: relative;
+	background: #fff;
+	padding-left: 10px;
+	padding-top: 10px;
+	box-shadow: -10px 2px 10px #f5f5f5;
+	border-radius: 15px;
+
+	.nav-tabs-item {
+		display: flex;
+		align-items: center;
+
+		@include respond(tabland) {
+			display: block;
+		}
+	}
+
+	.tab-wrapper {
+		.nav {
+			width: 100%;
+			max-width: 252px;
+			padding: 6px 19px;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			// position: absolute;
+
+			@include respond(xl) {
+				max-width: 217px;
+			}
+			@include respond(medium) {
+				max-width: 181px;
+			}
+			@include respond(tabland) {
+				max-width: 300px;
+				display: flex;
+				width: 100%;
+				margin: auto;
+			}
+
+			.nav-item {
+				margin: 0;
+				.nav-link {
+					padding: 18px 32px;
+
+					@include respond(medium) {
+						padding: 18px 16px;
+					}
+					@include respond(tabland) {
+						padding: 18px 45px;
+					}
+				}
+				@media (min-width: 992px) and (max-width: 1305px) {
+					margin: 0;
+				}
+				@include respond(phone) {
+					padding: 10px 0px;
+				}
+			}
+		}
+		.tab-content {
+			padding-top: 0;
+
+			.domain-paricing-wrapper {
+				display: flex;
+
+				.tbl-price-wrapper {
+					padding: 0;
+
+					.hosting_feature_list {
+						margin-top: 0;
+						border: none;
+
+						li {
+							border-bottom: 1px solid #f5f5f5;
+
+							&:first-child {
+								@include respond(phone-sm) {
+									font-size: 13px;
+									line-height: 30px;
+								}
+							}
+							@include respond(phone-xm) {
+								font-size: 14px;
+								line-height: 40px;
+							}
+						}
+					}
+					@include respond(tabland) {
+						flex-basis: 33.33%;
+					}
+					@include respond(phone) {
+						flex-basis: 25%;
+					}
+					&:first-of-type {
+						@include respond(phone) {
+							// flex-basis: 100%;
+						}
+					}
+				}
+				@include respond(tabland) {
+					// flex-wrap: wrap;
+				}
+			}
+			.icon-list {
+				li {
+					span {
+						color: $clrheading;
+						font-weight: $fontMid;
+					}
+					&:nth-child(even) {
+						background: transparent !important;
+					}
+					&:nth-child(odd) {
+						background: transparent !important;
+					}
+				}
+			}
+			.hosting_feature_list ul {
+				li {
+					&:nth-child(even) {
+						background: transparent;
+					}
+					&:nth-child(odd) {
+						background: #f3f7fe;
+					}
+				}
+			}
+			.domain-name {
+				.hosting_feature_list ul {
+					display: flex;
+					flex-wrap: wrap;
+					@include respond(phone-sm) {
+						display: block;
+					}
+					li {
+						@include respond(phone) {
+							flex-basis: 50%;
+							padding: 0;
+						}
+						&:first-of-type {
+							flex-basis: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.domain-header-bar {
+	background-color: #cfd9ea;
+	padding: 10px 18px;
+	margin-left: 6px;
+	width: 100%;
+	border-top-right-radius: 15px;
+	flex: 1;
+	position: relative;
+
+	@include respond(tabland) {
+		margin-left: 0;
+		border-top-left-radius: 15px;
+	}
+	h6 {
+		font-family: $fontEuclid;
+		font-size: 16px;
+		font-weight: $fontMid;
+		color: $clrheading;
+		margin-bottom: 0;
+	}
+	.content {
+		display: flex;
+		align-items: center;
+
+		@include respond(phone-sm) {
+			display: block;
+			text-align: center;
+		}
+	}
+	form {
+		.form-group {
+			width: 250px;
+			margin-left: 36px;
+			position: relative;
+			@include respond(phone-sm) {
+				width: 100%;
+				margin-top: 10px;
+				margin-left: 0;
+			}
+			.form-control {
+				&:focus {
+					outline: none;
+					border: none;
+
+					&-visible {
+						border: none;
+						outline: none;
+						outline-offset: 0;
+					}
+				}
+			}
+			[type="search"] {
+				outline-offset: 0;
+				outline: none;
+				border: none;
+				width: 100%;
+				font-family: $fontEuclid;
+				font-size: 16px;
+				color: $clrContent;
+				padding: 14px 40px 14px 16px;
+				background-color: $clrdefault;
+				border-radius: 15px;
+				border: none;
+				outline: none;
+				width: 100%;
+			}
+			button {
+				background: transparent;
+				border: none;
+				outline: none;
+				font-size: 16px;
+				color: $clrContent;
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+}
+
+// ===========================
+// Domain Pricing End
+// ===========================
+
+// ===========================
+// Pricing Pricing Start v2
+// ===========================
+
+.hosting-pricing-section {
+	position: relative;
+	margin-top: -255px;
+	z-index: 1;
+
+	@include respond(medium-xl) {
+		margin-top: 0;
+	}
+	@include respond(phone) {
+		padding-top: 0 !important;
+	}
+}
+
+.pricing-wraping-v2 {
+	.pricing-header-wrapper {
+		span {
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 28px;
+			color: $clrContent;
+			margin-top: 27px;
+		}
+	}
+	.price-details-wrapper {
+		margin-bottom: 23px;
+		.main-pricing {
+			font-size: 40px;
+			line-height: 56px;
+			color: $clrheading;
+			small {
+				font-size: 24px;
+				line-height: 32px;
+				color: $clrheading;
+			}
+		}
+		.para-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			span {
+				display: inline-block;
+				margin-left: 19px;
+				img {
+					width: auto;
+				}
+			}
+		}
+	}
+	.pricing-list {
+		border-bottom: none;
+		li.logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 28px 0px;
+			img {
+				width: auto;
+			}
+		}
+		li.logo.v2 {
+			div {
+				padding-left: 24px;
+				margin-left: 23px;
+				border-left: 1px solid rgba(112, 112, 112, 0.18);
+			}
+			img {
+				width: auto;
+
+				@include respond(xl) {
+					max-width: 70px;
+				}
+			}
+		}
+		li.logo.v3 {
+			align-items: baseline;
+			margin-bottom: 4px;
+		}
+	}
+}
+
+.pricing-wraping.bg-color {
+	background: #f3f7fe;
+}
+
+.hosting-title {
+	p {
+		max-width: 100%;
+		margin: 0;
+	}
+	@include respond(tabland) {
+		text-align: center;
+	}
+}
+.hosting-tab {
+	.nav {
+		background: #f4f7fe;
+
+		@include respond(tabland) {
+			display: flex;
+			justify-content: center;
+		}
+
+		.nav-item {
+			margin-right: 10px;
+
+			@include respond(phone) {
+				width: auto;
+			}
+			@include respond(phone-sm) {
+				width: 42%;
+			}
+
+			.discount {
+				position: absolute;
+				top: -18px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 100%;
+				max-width: 100px;
+
+				a {
+					padding: 2px 11px;
+				}
+			}
+
+			.nav-link {
+				padding: 17px 38px;
+
+				@media (max-width: 1470px) {
+					padding: 17px 24px;
+				}
+			}
+		}
+	}
+}
+
+// ===========================
+// Pricing Pricing End v2
+// ===========================
+
+// vps service pricing card styles start
+
+.vps-service-pricing-section {
+	overflow: hidden;
+}
+
+.vps-card-wrapper {
+	@include carousel-nav;
+
+	.owl-carousel {
+		.owl-dots {
+			display: none;
+		}
+		.owl-nav {
+			z-index: -1;
+			button {
+				font-size: 28px;
+				color: $clrContent;
+				position: absolute;
+				left: -50px;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: 0.9;
+
+				&.owl-prev {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: auto;
+					@include flex-box;
+
+					&::before {
+						content: "";
+						position: absolute;
+						height: 108px;
+						width: 108px;
+						background: rgba(120, 125, 167, 0.1);
+						border-radius: 30px;
+						transform: rotate(45deg);
+						z-index: -1;
+					}
+
+					i {
+						position: relative;
+						left: -32px;
+					}
+				}
+				&.owl-next {
+					position: absolute;
+					left: auto;
+					right: 0px;
+					top: 0;
+					@include flex-box;
+
+					&::before {
+						content: "";
+						position: absolute;
+						height: 108px;
+						width: 108px;
+						background: rgba(120, 125, 167, 0.1);
+						border-radius: 30px;
+						transform: rotate(45deg);
+						z-index: -1;
+					}
+
+					i {
+						position: relative;
+						right: -32px;
+					}
+
+					// @include respond(tabport) {
+					// 	right: -30px;
+					// }
+				}
+				// @include respond(tabport) {
+				// 	left: -30px;
+				// }
+			}
+			@include respond(phone) {
+				display: none;
+			}
+		}
+	}
+}
+.vps-pricing-card-wrapper {
+	display: block;
+
+	.vps-price-card-item {
+		flex-basis: auto;
+		background: #787da7;
+		border-radius: 20px;
+
+		@media (max-width: 600px) {
+			margin-bottom: 30px;
+		}
+		.vps-card-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 32px 15px;
+			border-radius: 20px 20px 0px 0px;
+			@include respond(tabport) {
+				padding: 32px 12px;
+			}
+			.header-content {
+				margin: auto;
+				flex: 1;
+			}
+			.card-desc {
+				h4 {
+					font-family: $fontEuclid;
+					font-size: 22px;
+					line-height: 62px;
+					font-weight: 700;
+					color: $clrdefault;
+					@include respond(tabport) {
+						font-size: 19px;
+						line-height: 32px;
+					}
+				}
+				p {
+					font-family: $fontEuclid;
+					font-size: 14px;
+					line-height: 28px;
+					font-weight: 400;
+					color: $clrdefault;
+				}
+			}
+			.price-wrapper {
+				flex-basis: 100%;
+				max-width: 130px;
+			}
+			.price-wrapper {
+				p {
+					text-align: right;
+					padding-left: 25px;
+					@include respond(tabport) {
+						padding-left: 20px;
+					}
+					&:last-child {
+						text-align: right;
+						font-family: $fontEuclid;
+						font-size: 14px;
+						line-height: 28px;
+						color: $clrdefault;
+						padding-right: 8px;
+					}
+				}
+
+				.old-price {
+					font-family: $fontEuclid;
+					font-size: 16px;
+					line-height: 21px;
+					font-weight: 400;
+					color: #ffffff8c;
+					text-align: left;
+				}
+				.curent-price {
+					font-family: $fontEuclid;
+					font-size: 36px;
+					line-height: 48px;
+					font-weight: 700;
+					color: $clrdefault;
+				}
+			}
+		}
+		.bg-yellow {
+			background: #f8b409;
+		}
+		.bg-red {
+			background: #fd0354;
+		}
+		.bg-blue {
+			background: #771efc;
+		}
+		.bg-cyan {
+			background: #37c2eb;
+		}
+		.vps-card-body {
+			display: block;
+			padding: 35px 0px;
+			background: #f4f7fe;
+			border-radius: 0px 0px 20px 20px;
+			.content {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				border-bottom: 1px solid rgba(205, 208, 224, 0.39);
+				.item-block {
+					margin: auto;
+					flex-basis: 50%;
+					border-right: 1px solid rgba(205, 208, 224, 0.39);
+					.item-icon {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						margin-top: 15px;
+						img {
+							width: auto;
+						}
+					}
+					.item-content {
+						text-align: center;
+						h4 {
+							font-family: $fontEuclid;
+							font-size: 16px;
+							line-height: 42px;
+							font-weight: 400;
+							color: $clrheading;
+						}
+						p {
+							font-family: $fontEuclid;
+							font-size: 14px;
+							line-height: 28px;
+							font-weight: 300;
+							color: $clrContent;
+							margin-bottom: 10px;
+						}
+					}
+					&:last-child {
+						border-right: none;
+					}
+				}
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+		.vps-card-footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 15px;
+			background: #787da7;
+			padding: 17px 0px;
+			border-radius: 0px 0px 20px 20px;
+			a {
+				color: $clrdefault;
+				font-family: $fontEuclid;
+				font-size: 16px;
+				list-style: 21px;
+				font-weight: 400;
+				text-transform: capitalize;
+				text-align: center;
+				display: inline-block;
+			}
+		}
+	}
+}
+// vps service pricing card styles end
+
+// vps hosting pricing card styles start
+.vps-hosting-pricing {
+	background: url("../images/pricing-card/hosting-pricing-bg.svg") no-repeat center center;
+	background-size: cover;
+	padding-bottom: 400px;
+
+	@include respond(tabland) {
+		padding-bottom: 0;
+	}
+}
+// vps hosting pricing card styles end

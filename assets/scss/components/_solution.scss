@@ -1,0 +1,36 @@
+// Business Solution Start
+
+.business-solution {
+	background: url("../images/solution/solution-bg.jpg");
+	@include banner-size;
+}
+
+.solution-btn {
+	a {
+		font-family: $fontCircular;
+		font-size: 16px;
+		font-weight: $fontRegular;
+		line-height: 16px;
+		color: $clrdefault;
+		display: inline-block;
+		border: 1px solid $clrdefault;
+		border-radius: 15px;
+		width: 229px;
+		height: 36px;
+		@include flex-box;
+		transition: $transition;
+
+		&:hover {
+			color: $clrPrimary;
+			background: $clrdefault;
+		}
+	}
+}
+
+.business-solution-content {
+	@include respond(tabland) {
+		margin-bottom: 30px;
+	}
+}
+
+// Business Solution End

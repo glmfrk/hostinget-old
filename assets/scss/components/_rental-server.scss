@@ -1,0 +1,399 @@
+// Rental Banner Strat
+
+.rental-banner {
+	background: url("../images/banner/banner.svg");
+	padding: 150px 0px 220px;
+	@include banner-size;
+	@include respond(xl) {
+		padding-bottom: 10%;
+	}
+
+	@include respond(tabland) {
+		padding: 80px 0px 50px;
+	}
+	@include respond(phone) {
+		background: transparent;
+	}
+}
+// Rental Banner End
+// rental hosting domain card section start
+
+.rental-domain-card-sec {
+	position: relative;
+	margin-top: 0;
+	overflow: hidden;
+	@media (max-width: 1600px) {
+		margin-top: 0;
+	}
+	@include respond(medium) {
+		margin-top: 0%;
+	}
+}
+
+.rental-card-wrapper .owl-item.center {
+	transform: scale(1.1);
+	transition: $transition;
+}
+.rental-card-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.pricing-table-scroll {
+	@include respond(tabland) {
+		overflow: scroll;
+		.scroll-width {
+			overflow: hidden;
+			width: 800px;
+		}
+	}
+
+	.tab-content {
+		@include respond(tabland) {
+			overflow: hidden;
+			width: 1200px;
+		}
+	}
+	.table-pricing {
+		@include respond(tabland) {
+			overflow: hidden;
+			width: 1190px;
+		}
+	}
+}
+
+// Pricing Table Scroll End
+
+// Rentaal Page Wrapper
+
+.rental-page-wrapper {
+	.nav-tabs-item {
+		position: absolute;
+		top: auto;
+		z-index: 1;
+
+		@include respond(tabland) {
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+		.nav {
+			display: flex;
+
+			.nav-item .nav-link {
+				padding: 17px 45px;
+
+				@include respond(xl) {
+					padding: 17px 30px;
+				}
+			}
+			@include respond(tabland) {
+				justify-content: center;
+			}
+		}
+	}
+	.tbl-price-wrapper {
+		&:nth-of-type(1) {
+			.hosting_feature_list {
+				.icon-list {
+					li {
+						padding-left: 20px;
+						border-top-left-radius: 15px;
+						border-bottom-left-radius: 15px;
+					}
+				}
+			}
+		}
+		&:nth-of-type(4) {
+			.hosting_feature_list {
+				.icon-list {
+					li {
+						// padding-left: 20px;
+						border-top-right-radius: 15px;
+						border-bottom-right-radius: 15px;
+					}
+				}
+			}
+		}
+	}
+	.table-pricing {
+		.hosting_feature_list ul li .icon::after {
+			background-color: #dcf4d8;
+		}
+	}
+}
+
+// Rental Page Wrapper End
+
+.rental-card {
+	border-radius: 15px;
+	padding: 0px 0px 22px;
+	margin-top: 0;
+	margin-bottom: 65px;
+	.icon {
+		border-radius: 15px 15px 0px 0px;
+		padding: 24px 0px;
+		min-height: 104px;
+		display: flex;
+		align-items: center;
+	}
+	.content {
+		@include respond(medium) {
+			padding: 0px;
+		}
+	}
+	.content h5 {
+		min-height: 42px;
+	}
+	.main-pricing {
+		@include respond(medium-xl) {
+			font-size: 25px !important;
+			line-height: 37px !important;
+		}
+	}
+	.bg-color-1 {
+		background: #771efc;
+	}
+	.bg-color-2 {
+		background: #f8b409;
+	}
+	.bg-color-3 {
+		background: #fd0354;
+	}
+	.bg-color-4 {
+		background: #787da7;
+	}
+	.pricing-btn {
+		a {
+			padding-left: 65px !important;
+			background: #f8ca09 !important;
+			@include respond(medium) {
+				padding: 8px 40px !important;
+			}
+			@include respond(tabland) {
+				padding: 8px 21px !important;
+				padding-left: 65px !important;
+			}
+			img {
+				padding-left: 45px;
+				@include respond(medium) {
+					padding-left: 20px;
+				}
+				@include respond(tabland) {
+					padding-left: 45px;
+				}
+			}
+		}
+	}
+}
+
+.rental-card.active {
+	transform: scale(1.1);
+
+	@include respond(phone) {
+		transform: scale(1);
+	}
+}
+// rental hosting domain card section end
+
+// ental server feature section start
+.rental-feature-sec {
+	padding: 0px;
+}
+// ental server feature section end
+
+// Hosting Pricing Start
+.headingh3 {
+	margin-top: 10px;
+	h3 {
+		font-size: 31px;
+		line-height: 41px;
+		font-weight: 700;
+	}
+	h4 {
+		font-size: 31px;
+		line-height: 41px;
+		font-weight: 300;
+	}
+}
+// Hosting Pricing End
+
+.ddcationServer-feature-sec {
+	.section-title {
+		p {
+			max-width: 740px;
+		}
+	}
+}
+.ddcation-server-feature-sec {
+	margin-top: 65px;
+}
+.testimonial-s-feature {
+	@include carousel-nav;
+	margin-top: -50px;
+}
+.single-item-feature {
+	background: $clrdefault;
+	border-radius: 15px;
+	box-shadow: 0px 4px 40px rgba(171, 171, 171, 0.13);
+	margin-bottom: 30px;
+	.header-part {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.item-image {
+		width: 100%;
+		max-width: 206px;
+		height: 90px;
+		border-radius: 15px 0px 15px 0px;
+		background: #fc6b2c;
+		padding: 15px 30px;
+		display: flex;
+		align-items: center;
+		img {
+			width: 100%;
+			margin: auto;
+		}
+		@include respond(phone-sm) {
+			height: auto;
+			max-width: 140px;
+			padding: 15px 20px;
+		}
+	}
+	.item-image.v2 {
+		background: #53bce6;
+	}
+	.item-price {
+		flex: 1;
+		text-align: right;
+		h3 {
+			font-size: 42px;
+			line-height: 56px;
+			color: $clrheading;
+			margin-right: 21px;
+
+			@include respond(tabland) {
+				font-size: 35px;
+			}
+		}
+		p {
+			font-size: 10px;
+			line-height: 14px;
+			font-weight: 400;
+			margin-right: 32px;
+		}
+	}
+	.body-part {
+		h4 {
+			font-size: 18px;
+			font-weight: 400;
+			line-height: 24px;
+			color: $clrheading;
+			margin: 30px 0px 22px 12px;
+		}
+		.list-box {
+			display: flex;
+			justify-content: flex-start;
+			margin-left: 12px;
+
+			@include respond(phone-sm) {
+				display: block;
+			}
+		}
+		.navList {
+			margin-right: 30px;
+
+			@include respond(tabland) {
+				margin-right: 13px;
+			}
+			li {
+				font-size: 14px;
+				line-height: 19px;
+				color: $clrContent;
+				position: relative;
+
+				&::before {
+					content: url("../images/testimonial/blue-dot.svg");
+					margin-right: 5px;
+				}
+
+				@include respond(phone-sm) {
+					margin: 5px 0px;
+				}
+			}
+		}
+		.navList.v2 {
+			li {
+				&:last-child:before {
+					padding-left: 15px;
+
+					@include respond(phone-sm) {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+	.arrow {
+		display: flex;
+		align-items: end;
+		justify-content: flex-end;
+		a {
+			font-size: 16px;
+			width: 40px;
+			height: 40px;
+			color: #787da7;
+			border-radius: 50%;
+			background: #ddd;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0px 17px 12px 0px;
+		}
+	}
+}
+
+// rental server feature section start
+
+// rental server feature section end
+
+// Operating System and Server Section Start
+.operating-system-server {
+	.section-title {
+		h2 {
+			max-width: 670px;
+			margin: 0px auto 30px;
+		}
+		p {
+			max-width: 100%;
+		}
+	}
+	.icon-box-item {
+		margin-top: 0;
+		.choose-btn {
+			margin-top: 30px;
+			a {
+				padding: 14px 57px;
+				color: $clrBlack;
+
+				@include respond(phone-sm) {
+					padding: 14px 45px;
+				}
+
+				i {
+					font-size: 12px;
+					padding-left: 6px;
+					display: inline-block;
+				}
+
+				&:hover {
+					color: $clrdefault;
+				}
+			}
+		}
+	}
+}
+// Operating System and Server Section End

@@ -1,0 +1,68 @@
+/* Domain Blog Styles Here Start */
+.domain-blog-sec {
+	position: relative;
+	padding: 32px 0px 0px;
+}
+.domain-blog-sec .section-title {
+	margin-bottom: 128px;
+
+	@include respond(medium) {
+		margin-bottom: 100px;
+	}
+	@include respond(tabland) {
+		margin-bottom: 80px;
+	}
+	@include respond(tabport) {
+		margin-bottom: 51px;
+	}
+}
+
+.item-blog-domain {
+	margin-bottom: 42px;
+
+	@include respond(tabland) {
+		margin-bottom: 30px;
+	}
+	h3 {
+		color: #1e266d;
+		font-size: 24px;
+		line-height: 32px;
+		font-weight: 300;
+		text-transform: capitalize;
+		max-width: 575px;
+	}
+	p {
+		color: $clrContent;
+		font-size: 16px;
+		line-height: 28px;
+		font-weight: 300;
+		padding: 14px 0px;
+		// max-width: 545px;
+	}
+	a {
+		color: $clrPrimary;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 300;
+		text-transform: capitalize;
+		text-decoration: underline;
+	}
+}
+.item-blog-d-image {
+	margin-bottom: 42px;
+	@include respond(tabland) {
+		margin-bottom: 30px;
+	}
+	img {
+		width: auto;
+		height: auto;
+		display: block;
+		margin: auto;
+
+		@include respond(tabland) {
+			width: 100%;
+		}
+	}
+}
+
+/* Domain Blog Styles Here Done */

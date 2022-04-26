@@ -1,0 +1,104 @@
+// Testimonial Section Start
+
+.testimonial-section {
+    position: relative;
+    @include carousel-nav;
+    padding: 50px 0px;
+
+    .owl-carousel {
+        .owl-nav {
+            display: none;
+        }
+    }
+    .section-title {
+        margin-bottom: 75px;
+    }
+}
+
+.testimonial-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.item-card-feedback {
+    padding: 0px 41px 0px 50px;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0px;
+        z-index: 2;
+        width: 1px;
+        height: 70%;
+        display: block;
+        box-sizing: border-box;
+        border-right: 1px solid rgba(225, 226, 235, 0.42);
+        transform: translateY(-50%);
+    }
+    &:first-child {
+        padding-left: 0;
+    }
+    .item-card-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 27px;
+
+        .client-image {
+            margin-right: 14px;
+
+            img {
+                height: auto;
+                width: auto;
+                display: block;
+            }
+        }
+        .client-bio {
+            h5 a {
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: $fontRegular;
+                text-transform: capitalize;
+                color: $clrheading;
+                margin-bottom: 3px;
+                display: block;
+            }
+            p {
+                font-size: 14px;
+                line-height: 19px;
+                font-weight: $fontRegular;
+                text-transform: capitalize;
+                color: $clrContent;
+            }
+        }
+        .item-card-body {
+            p {
+                font-size: 16px;
+                text-transform: capitalize;
+                color: #787da7;
+            }
+        }
+    }
+}
+
+// Testimonial Slide Start
+
+.testimonial-s-feature {
+    @include carousel-nav;
+
+    &.owl-carousel {
+        .owl-dots {
+            button {
+                margin: 10px 4px 20px;
+            }
+        }
+        .owl-nav {
+            display: none;
+        }
+    }
+}
+
+// Testimonial Slide End

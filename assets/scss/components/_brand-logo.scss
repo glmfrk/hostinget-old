@@ -1,0 +1,108 @@
+/* Brand Logo Caro Styles Here Start */
+
+.brand-company-logo {
+	@include carousel-nav;
+
+	.owl-carousel {
+		.owl-dots {
+			display: none;
+		}
+		.owl-nav {
+			button {
+				font-size: 18px;
+				color: $clrdefault;
+				position: absolute;
+				left: -50px;
+				top: 50%;
+				transform: translateY(-50%);
+				opacity: 0.9;
+
+				&.owl-prev {
+					position: absolute;
+					top: 0;
+				}
+				&.owl-next {
+					position: absolute;
+					left: auto;
+					right: -50px;
+					top: 0;
+
+					@include respond(tabport) {
+						right: -30px;
+					}
+				}
+				@include respond(tabport) {
+					left: -30px;
+				}
+			}
+			@include respond(phone) {
+				display: none;
+			}
+		}
+	}
+}
+
+.brand-logo-caro-sec {
+	position: relative;
+	background: url(../images/brands/brand-bg-image.svg) no-repeat center center;
+	background-size: cover;
+	padding: 66px 0px 68.5px;
+	margin-top: 55px;
+}
+.brand-logo-caro-sec .section-title h2 {
+	color: #ffffff;
+}
+.brand-logo-caro-sec .section-title p {
+	color: #ffffff;
+}
+
+.brand-caro {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.item-logo-box {
+	.item-logo {
+		width: 144px;
+		height: 70px;
+		background: #f5f5f5;
+		border-radius: 5px;
+		box-sizing: border-box;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		padding: 12px 15px;
+		margin: auto;
+	}
+	.item-content {
+		padding-top: 15px;
+		background: transparent;
+		h3 {
+			display: block;
+			color: #fff;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 32px;
+			text-align: center;
+			margin-bottom: 6.7px;
+
+			small {
+				color: #fff;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 16px;
+				text-align: center;
+				display: inline-block;
+			}
+		}
+		p {
+			color: #fff;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 16px;
+			text-align: center;
+		}
+	}
+}
+
+/* Brand Logo Caro Styles Here Done */

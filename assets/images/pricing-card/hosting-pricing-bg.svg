@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1319.5" viewBox="0 0 1920 1319.5">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_935" data-name="Rectangle 935" width="1920" height="382" rx="20" transform="translate(-0.458)" fill="#f4f7fe" opacity="0.1"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f3f7fe"/>
+      <stop offset="1" stop-color="#f3f7fe" stop-opacity="0"/>
+      <stop offset="1" stop-color="gray"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2957" data-name="Group 2957" transform="translate(3.459 -2506.5)">
+    <g id="Sepet_-_Firma_adı-10" data-name="Sepet - Firma adı-10" transform="translate(-3 3444)" clip-path="url(#clip-path)">
+      <path id="Path_3134" data-name="Path 3134" d="M18.058,0H1901.527c9.973,0,18.058,8.954,18.058,20V362c0,11.046-8.085,20-18.058,20,0,0-467.254-159.673-938.121-159.673S18.058,382,18.058,382C8.085,382,0,373.046,0,362V20C0,8.954,8.085,0,18.058,0Z" transform="translate(-0.044)" fill="#f4f7fe"/>
+    </g>
+    <path id="Path_3637" data-name="Path 3637" d="M0,0H1920V968.8H0Z" transform="translate(1916.542 3475.301) rotate(180)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

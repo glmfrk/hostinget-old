@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100.291" height="89.334" viewBox="0 0 100.291 89.334">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.698" y1="0.15" x2="0" y2="1.098" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#771efc"/>
+      <stop offset="1" stop-color="#efe5ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2960" data-name="Group 2960" transform="translate(-380 -3381)">
+    <path id="Polygon_2" data-name="Polygon 2" d="M45,0,90,78H0Z" transform="translate(380 3381)" fill="url(#linear-gradient)"/>
+    <path id="Path_2644" data-name="Path 2644" d="M38.122,17.449V10.224A7.246,7.246,0,0,0,30.9,3H9.224A7.246,7.246,0,0,0,2,10.224V60.795a7.246,7.246,0,0,0,7.224,7.224H67.019a7.246,7.246,0,0,0,7.224-7.224V24.673a7.246,7.246,0,0,0-7.224-7.224ZM16.449,60.795H9.224V53.571h7.224Zm0-14.449H9.224V39.122h7.224Zm0-14.449H9.224V24.673h7.224Zm0-14.449H9.224V10.224h7.224ZM30.9,60.795H23.673V53.571H30.9Zm0-14.449H23.673V39.122H30.9Zm0-14.449H23.673V24.673H30.9Zm0-14.449H23.673V10.224H30.9Zm32.51,43.346H38.122V53.571h7.224V46.346H38.122V39.122h7.224V31.9H38.122V24.673H63.407a3.623,3.623,0,0,1,3.612,3.612v28.9A3.623,3.623,0,0,1,63.407,60.795ZM59.795,31.9H52.571v7.224h7.224Zm0,14.449H52.571v7.224h7.224Z" transform="translate(405.547 3401.815)" fill="#e2d0fc" stroke="rgba(255,255,255,0.27)" stroke-width="1"/>
+  </g>
+</svg>

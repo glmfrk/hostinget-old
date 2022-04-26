@@ -1,0 +1,731 @@
+// Banner Start
+.banner-section {
+	overflow: hidden;
+	background: url("../images/banner/banner.svg");
+	@include banner-size;
+	padding-bottom: 150px;
+
+	@include respond(medium-xl) {
+		padding-bottom: 20px;
+	}
+}
+
+.domain-banner-section {
+	overflow: hidden;
+	background: url("../images/banner/banner-2.svg");
+	@include banner-size;
+	padding-top: 81px;
+	padding-bottom: 0;
+
+	@include respond(medium-xl) {
+		padding-bottom: 20px;
+	}
+}
+.domain-banner-section {
+	.search-form {
+		button {
+			span {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.domain-meta {
+	font-family: $fontEuclid;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: $fontRegular;
+	color: $clrheading;
+	background: #d2e1ff;
+	border-radius: 46px;
+	padding: 6px 35px 6px 6px;
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 19px;
+
+	strong {
+		margin-left: 5px;
+	}
+	.span {
+		font-family: $fontCircular;
+		font-size: 14px;
+		line-height: 19px;
+		color: $clrdefault;
+		display: inline-block;
+		padding: 5px 14px;
+		background: #1c67ff;
+		border-radius: 48px;
+		font-weight: $fontBold;
+		margin-right: 8px;
+	}
+}
+
+// Banner hero Content Start
+
+.hero-text {
+	h1 {
+		margin-bottom: 15px;
+	}
+	p {
+		font-size: 24px;
+		font-weight: $fontRegular;
+		line-height: 32px;
+		margin-bottom: 35px;
+
+		@include respond(phone-sm) {
+			font-size: 16px;
+			line-height: 26px;
+		}
+	}
+	&-v2 {
+		p {
+			color: $clrheading;
+		}
+		.search-form {
+			margin-bottom: 0;
+			form {
+				margin: auto;
+				width: 67%;
+
+				@include respond(medium) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// Banner hero Content End
+
+// Banner Side Image
+
+.banner-side-bg {
+	img {
+		// width: 700px;
+		width: 31%;
+		max-width: 100%;
+		height: auto;
+		display: block;
+		position: absolute;
+		top: 70px;
+		right: 0;
+
+		@include respond(tabland) {
+			display: none;
+		}
+	}
+}
+
+// List Item Start
+
+.list-item {
+	ul {
+		display: flex;
+		align-items: center;
+
+		@include respond(tabland) {
+			flex-wrap: wrap;
+		}
+		li {
+			display: flex;
+			align-items: center;
+			margin-right: 35px;
+			@include respond(medium-xl) {
+				margin-right: 20px;
+			}
+			@include respond(tabland) {
+				margin-bottom: 10px;
+			}
+			@include respond(tabport) {
+				margin-bottom: 20px;
+			}
+
+			img {
+				width: auto;
+				height: auto;
+				display: block;
+			}
+			a {
+				font-size: 14px;
+				color: $clrContent;
+				font-weight: $fontLight;
+				line-height: 19px;
+				margin-left: 4px;
+				flex: 1;
+				@include respond(medium) {
+					font-size: 11px;
+				}
+				@include respond(tabland) {
+					font-size: 14px;
+				}
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+	&-v3 {
+		ul {
+			margin-top: 43px;
+			justify-content: center;
+
+			@include respond(phone-sm) {
+				justify-content: left;
+			}
+			@include respond(phone-xm) {
+				display: block;
+			}
+
+			li {
+				margin-right: 90px;
+				a {
+					font-size: 16px;
+					color: $clrheading;
+				}
+
+				@include respond(tabport) {
+					margin-right: 12px;
+				}
+				@include respond(phone) {
+					margin-right: 0px;
+					width: 33%;
+				}
+				@include respond(phone-sm) {
+					width: 50%;
+				}
+				@include respond(phone-xm) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+// List Item End
+
+// Search Form Start
+.search-form {
+	margin-bottom: 45px;
+	form {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border: 10px solid #e9f0fb;
+		background: $clrdefault;
+		border-radius: 50px;
+		padding: 10px 8px 10px 10px;
+		height: 95px;
+		width: 87%;
+
+		@include respond(phone) {
+			// height: 80px;
+			height: auto;
+			width: 100%;
+			display: block;
+			border-radius: 40px;
+		}
+
+		.form-control {
+			font-size: 16px;
+			font-weight: $fontRegular;
+			line-height: 21px;
+			color: $clrContent;
+			padding: 18px 26px;
+			outline: none;
+			border: none;
+			border-radius: 50px;
+			width: 70%;
+
+			&:focus {
+				box-shadow: none;
+				outline: none;
+				border: none;
+			}
+			@include respond(phone) {
+				width: 100%;
+				border: 1px solid #eee;
+
+				&:focus {
+					border: 1px solid $clrPrimary;
+				}
+			}
+		}
+		button {
+			font-family: $fontEuclid;
+			font-size: 16px;
+			// line-height: 21px;
+			font-weight: $fontLight;
+			color: $clrdefault;
+			padding: 0px 10px;
+			background: $clrPrimary;
+			border: none;
+			outline: none;
+			flex: 1;
+			width: 251px;
+			height: 63px;
+			border-radius: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include respond(medium) {
+				font-size: 12px;
+			}
+			@include respond(tabland) {
+				font-size: 16px;
+				flex: auto;
+			}
+
+			@include respond(phone) {
+				height: 50px;
+				width: 100%;
+				flex: inherit;
+				margin-top: 8px;
+			}
+
+			img {
+				height: auto;
+				width: auto;
+				display: inline-block;
+				margin-right: 19px;
+				@include respond(tabport) {
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+// Search Form End
+
+// domain-category
+
+.domain-price-wrapper {
+	margin-left: -20px;
+}
+
+.domain-price-wrapper {
+	@include carousel-nav;
+}
+
+.domain-category {
+	background: $clrdefault;
+	box-shadow: 0px 10px 33px rgba(86, 86, 86, 0.04);
+	border-radius: 15px;
+	padding: 15px 13px 21px 10px;
+	display: block;
+	margin: 64px 25px 40px;
+
+	@include respond(tabland) {
+		margin-top: 30px;
+	}
+	.category-item {
+		display: flex;
+		align-items: center;
+		padding-bottom: 16.5px;
+		margin-bottom: 9.5px;
+		border-bottom: 1px solid rgba(112, 112, 112, 0.11);
+
+		.image {
+			width: auto;
+			height: auto;
+			display: block;
+			background: #f5f5f5;
+			padding: 10px 12px;
+			border-radius: 5px;
+			margin-right: 9px;
+			@include respond(tabport) {
+				padding: 7px 5px;
+			}
+		}
+		.content {
+			h5 {
+				font-size: 16px;
+				font-weight: $fontRegular;
+				line-height: 21px;
+				color: #1e266d;
+				display: block;
+				margin-bottom: 3px;
+			}
+			a {
+				font-size: 14px;
+				font-weight: $fontRegular;
+				line-height: 19px;
+				color: $clrContent;
+				display: flex;
+
+				img {
+					width: auto;
+					height: auto;
+					margin-left: 10px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+	.bottom-content {
+		@include flex-box;
+		justify-content: space-between;
+
+		.discount {
+			a {
+				font-family: $fontEuclid;
+				font-size: 12px;
+				font-weight: $fontRegular;
+				line-height: 16px;
+				color: $clrGreen;
+				background: rgba(66, 200, 38, 0.25);
+				padding: 3px 9px;
+				text-transform: uppercase;
+				border-radius: 5px;
+				display: block;
+				transition: $transition;
+
+				&:hover {
+					color: $clrdefault;
+					background: $clrGreen;
+				}
+			}
+		}
+		.price {
+			font-size: 16px;
+			font-weight: $fontBold;
+			line-height: 21px;
+			color: $clrheading;
+
+			small {
+				font-size: 12px;
+				line-height: 16px;
+				font-weight: $fontRegular;
+				color: $clrContent;
+			}
+		}
+	}
+}
+
+// Domain Transfer Start
+
+.domain-transfer {
+	display: inline-flex;
+	align-items: center;
+	background: #e9f0fb;
+	border-radius: 0px 0px 15px 15px;
+	padding: 13px 38px;
+
+	@include respond(phone) {
+		border-radius: 15px;
+		margin-top: 10px;
+	}
+
+	img {
+		width: auto;
+		height: auto;
+		display: block;
+		margin-right: 10px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 28px;
+		color: $clrContent;
+		margin-bottom: 0;
+	}
+}
+
+// Domain Transfer End
+
+// Hosting Item Slide Start
+
+.hosting-offer {
+	@include carousel-nav;
+	margin: 0px 5px;
+
+	.owl-carousel {
+		.owl-dots {
+			button {
+				background: #e2d0fc;
+
+				&.active {
+					background: $clrPrimary;
+				}
+			}
+		}
+		.owl-nav {
+			display: none;
+		}
+	}
+}
+
+.hosting-item {
+	background: $clrdefault;
+	border-radius: 15px;
+	box-shadow: 0px 10px 20px rgba(112, 112, 112, 0.11);
+	padding: 45px 0px 27px;
+	margin-top: 88px;
+	margin-bottom: 40px;
+	text-align: center;
+
+	@include respond(tabport) {
+		margin-top: 40px;
+	}
+	.icon {
+		padding-bottom: 45px;
+		border-bottom: 1px solid rgba(112, 112, 112, 0.11);
+		img {
+			width: auto;
+			height: auto;
+			display: block;
+			margin: auto;
+		}
+	}
+	.content {
+		margin-top: 25px;
+		padding: 0px 30px;
+		p {
+			font-size: 12px;
+			line-height: 16px;
+			color: $clrContent;
+			font-weight: $fontLight;
+			margin-bottom: 17px;
+		}
+		h5 {
+			font-size: 16px;
+			line-height: 21px;
+			font-weight: $fontRegular;
+			color: $clrContent;
+			margin-bottom: 5px;
+		}
+		.main-pricing {
+			font-size: 34px;
+			line-height: 46px;
+			margin-bottom: 18px;
+			padding-top: 0;
+			letter-spacing: 2px;
+
+			span {
+				font-size: 23px;
+				line-height: 31px;
+				margin-right: 0;
+				letter-spacing: 0;
+			}
+			small {
+				font-size: 18px;
+				line-height: 24px;
+				letter-spacing: 0;
+			}
+		}
+		.list-item {
+			ul {
+				display: block;
+				li {
+					display: flex;
+					align-items: center;
+					margin-right: 0;
+					margin-top: 26px;
+
+					a {
+						font-family: $fontEuclid;
+						font-size: 16px;
+						line-height: 21px;
+						color: $clrContent;
+						@include flex-box;
+						img {
+							width: auto;
+							height: auto;
+							display: block;
+							margin-left: 15px;
+						}
+					}
+				}
+			}
+		}
+		.discount {
+			a {
+				font-family: $fontEuclid;
+				font-size: 12px;
+				font-weight: 400;
+				line-height: 16px;
+				color: $clrGreen;
+				display: inline-block;
+				background: rgba(66, 200, 38, 0.25);
+				padding: 3px 10px;
+				text-transform: uppercase;
+				border-radius: 5px;
+				transition: $transition;
+			}
+		}
+		.pricing-btn {
+			margin-top: 34px;
+			a {
+				font-family: "Circular Std";
+				font-size: 16px;
+				line-height: 21px;
+				display: inline-flex;
+				align-items: center;
+				color: #383838;
+				font-weight: $fontRegular;
+				background: $clryellow;
+				border-radius: 15px;
+				padding: 8px 21px;
+				-webkit-transition: 0.3s linear;
+				transition: 0.3s linear;
+
+				img {
+					width: auto;
+					height: auto;
+					display: block;
+					margin-left: 13px;
+				}
+			}
+		}
+	}
+}
+
+// Hosting Item Slide End
+
+// Hostimg Banner Start
+
+.hostingBanner-section {
+	overflow: hidden;
+	background: url("../images/banner/banner-2.svg");
+	@include banner-size;
+	padding-top: 81px;
+	padding-bottom: 26%;
+
+	@include respond(medium-xl) {
+		padding-bottom: 20px;
+	}
+}
+
+.item-bannerImage {
+	position: absolute;
+	top: 16px;
+	right: auto;
+}
+
+.host-item-bannerContent {
+	.hero-text {
+		.sub-title {
+			display: inline-block;
+			font-size: 24px;
+			line-height: 32px;
+			color: $clrheading;
+			text-transform: capitalize;
+			margin-bottom: 19px;
+		}
+	}
+}
+
+// Hostimg Banner End
+
+// VPS Server Banner Start
+.vps-banner {
+	padding: 100px 0px 160px;
+
+	@media (max-width: 1600px) {
+		padding-bottom: 80px;
+	}
+}
+.vpsBanner-image {
+	position: absolute;
+	top: 48px;
+}
+.vps-category-box {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	// column-gap: 24px;
+	margin-top: 36px;
+
+	@include respond(tabport) {
+		margin-top: 15px;
+	}
+	@include respond(phone-mid) {
+		display: block;
+	}
+	.vps-category {
+		flex-basis: 100%;
+		max-width: 192px;
+		padding: 11px 15px 11px 15px;
+		margin: 0;
+		margin-right: 24px;
+		background: transparent;
+		border-radius: 12px;
+		border: 1px solid rgba(146, 150, 184, 0.42);
+		&:last-child {
+			margin-right: 0;
+		}
+		@include respond(medium-xl) {
+			margin-bottom: 10px;
+		}
+
+		@include respond(tabland) {
+			margin-bottom: 24px;
+		}
+		@include respond(tabport) {
+			flex-basis: 48%;
+			max-width: 100%;
+			margin-right: 2%;
+			margin-bottom: 2%;
+		}
+
+		@include respond(phone-sm) {
+			max-width: 187px;
+			margin-right: 5px;
+			width: 100%;
+		}
+		@media (max-width: 420px) {
+			max-width: 100%;
+			margin-right: 0px;
+			width: 100%;
+		}
+		.category-item {
+			border-bottom: none;
+			padding-bottom: 0;
+			margin-bottom: 0;
+			.image {
+				padding: 0;
+				background: transparent;
+			}
+			.content {
+				font-family: $fontEuclid;
+				font-size: 16px;
+				line-height: 28px;
+				font-weight: 300;
+				color: $clrContent;
+			}
+		}
+	}
+}
+
+// VPS Server Banner End
+
+// SSL Banner Start
+
+.ssl-banner {
+	padding: 115px 0px 20%;
+
+	@media (max-width: 1600px) {
+		padding-bottom: 80px;
+	}
+	.hero-text {
+		p {
+			max-width: 730px;
+		}
+	}
+}
+.sslBanner-image {
+	position: absolute;
+	top: 107px;
+}
+
+// SSL Item Slide Start
+.ssl-item {
+	padding: 24px 0px 27px;
+	margin: 0px 0px 30px;
+	.icon {
+		min-height: 60px;
+		padding-bottom: 16px;
+	}
+}
+// SSL Item Slide End

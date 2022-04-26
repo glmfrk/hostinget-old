@@ -1,0 +1,27 @@
+// Product Section Start
+
+.product-slide-wrapper {
+	@include carousel-nav;
+	margin-top: 65px;
+
+	.owl-carousel {
+		.owl-dots {
+			button {
+				margin: 10px 4px 20px;
+			}
+		}
+		.owl-nav {
+			display: none;
+		}
+	}
+}
+
+.product-slide {
+	position: relative;
+	margin-top: -50px;
+
+	.icon-box-item-v3 {
+		box-shadow: 0px 50px 50px rgba(255, 255, 255, 0.16);
+	}
+}
+// Product Section End

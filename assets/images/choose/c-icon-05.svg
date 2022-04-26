@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="99.5" height="87.5" viewBox="0 0 99.5 87.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.865" y1="0.182" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#771efc"/>
+      <stop offset="1" stop-color="#b586ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_2958" data-name="Group 2958" transform="translate(-803 -3067)">
+    <rect id="Rectangle_696" data-name="Rectangle 696" width="78" height="78" transform="translate(803 3067)" fill="url(#linear-gradient)"/>
+    <path id="control-centre" d="M16.74,31.48H54.26A14.74,14.74,0,0,0,54.26,2H16.74a14.74,14.74,0,0,0,0,29.48Zm0-24.12H54.26a9.38,9.38,0,1,1,0,18.76H16.74a9.38,9.38,0,0,1,0-18.76Zm0,16.08a6.7,6.7,0,1,0-6.7-6.7,6.7,6.7,0,0,0,6.7,6.7ZM54.26,39.52H16.74a14.74,14.74,0,1,0,0,29.48H54.26a14.74,14.74,0,0,0,0-29.48ZM58.1,60.96a6.7,6.7,0,1,1,6.7-6.7A6.7,6.7,0,0,1,58.1,60.96Z" transform="translate(833 3085)" fill="#e2d0fc" stroke="rgba(255,255,255,0.27)" stroke-width="1"/>
+  </g>
+</svg>

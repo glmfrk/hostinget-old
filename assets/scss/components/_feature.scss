@@ -1,0 +1,22 @@
+// Feature Section Start
+
+.feature-section {
+	.section-title {
+		margin-bottom: 85px;
+	}
+}
+
+// Feature Section End
+
+// vps-highlightService Start
+
+.vps-highlightService-sec {
+	position: relative;
+	margin-top: -275px;
+
+	@include respond(tabland) {
+		margin-top: 0;
+	}
+}
+
+// vps-highlightService End

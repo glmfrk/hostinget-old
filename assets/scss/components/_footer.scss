@@ -1,0 +1,214 @@
+// Footer Start
+
+.footer {
+	padding-top: 32px;
+	border-top: 1px solid #dee3eb;
+	.footer-top-part {
+		padding-bottom: 77px;
+	}
+}
+
+.footer-logo {
+	margin-bottom: 33px;
+
+	img {
+		width: auto;
+		height: auto;
+		display: block;
+	}
+}
+
+.left-column {
+	margin-bottom: 33px;
+
+	.phone {
+		a {
+			font-size: 40px;
+			line-height: 53px;
+			font-weight: 400;
+			color: #1e266d;
+			display: block;
+			margin-bottom: 39px;
+			@include respond(tabland) {
+				font-size: 32px;
+				line-height: 44px;
+				margin-bottom: 20px;
+			}
+			@include respond(tabport) {
+				font-size: 36px;
+				line-height: 44px;
+				margin-bottom: 20px;
+			}
+			@include respond(phone) {
+				font-size: 29px;
+			}
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+.footer-content {
+	p {
+		width: 100%;
+		max-width: 350px;
+	}
+	address {
+		font-size: 18px;
+		font-family: 400;
+		line-height: 28px;
+		color: #787da7;
+		display: block;
+		margin-bottom: 35px;
+		@include respond(phone-xm) {
+			font-size: 16px;
+		}
+	}
+}
+
+.email-box {
+	a {
+		display: block;
+		font-size: 18px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #771efc;
+		text-transform: lowercase;
+	}
+}
+
+.social-media {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-top: 38px;
+
+	li {
+		margin-right: 13px;
+
+		a {
+			width: 32px;
+			height: 32px;
+			border-radius: 50px;
+			color: rgba(132, 132, 132, 1);
+			background: rgba(139, 139, 139, 0.11);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: $transition;
+
+			&:hover {
+				background: $clrPrimary;
+				color: $clrdefault;
+			}
+		}
+	}
+}
+
+.footer-column {
+	h3 {
+		margin-bottom: 25px;
+		margin-top: 20px;
+		font-size: 18px;
+		font-weight: 400;
+		color: #1e266d;
+		text-transform: none;
+	}
+}
+
+.footer-items {
+	li {
+		a {
+			font-size: 14px;
+			line-height: 28px;
+			color: $clrContent;
+			transition: $transition;
+
+			&:hover {
+				color: $clrPrimary;
+			}
+		}
+	}
+}
+
+/* footer bottom part styles here  */
+.footer-bottom-part {
+	.container-fluid.v2 {
+		max-width: 1600px;
+	}
+	.footer-bottom-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		border-top: 1px solid #dee3eb;
+		padding-top: 39.5px;
+		padding-bottom: 65px;
+
+		@include respond(medium) {
+			display: block;
+			text-align: center;
+		}
+		@include respond(tabland) {
+			padding: 50px 0px;
+		}
+
+		.f-bottom-l-column {
+			p {
+				font-size: 16px;
+				line-height: 21px;
+				font-weight: 400;
+				color: $clrheading;
+				text-transform: capitalize;
+			}
+			@include respond(tabland) {
+				margin-bottom: 15px;
+			}
+		}
+		.f-bottom-r-column {
+			align-self: start;
+
+			.footer-menu {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+
+				@include respond(medium) {
+					justify-content: center;
+					margin-top: 10px;
+				}
+				@include respond(tabland) {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+
+				li {
+					margin-right: 40px;
+
+					a {
+						font-size: 14px;
+						line-height: 19px;
+						font-weight: 400;
+						color: $clrContent;
+						transition: $transition;
+
+						&:hover {
+							color: $clrPrimary;
+						}
+					}
+					@include respond(tabland) {
+						margin-right: 27px;
+						margin-bottom: 10px;
+					}
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Footer End
